@@ -112,3 +112,7 @@ Ejemplo: “En `js/app.js`, la salida no valida la cantidad disponible antes de 
 ## 8. Declaración de uso de IA
 
 Se utilizó ChatGPT como apoyo para organizar una primera versión del documento de estándares. El equipo revisó y ajustó manualmente el contenido para que corresponda a este proyecto, sus tecnologías y sus acuerdos de trabajo.
+
+## 9. Estado inicial del proyecto
+
+Al publicar este documento, el proyecto cuenta con una interfaz web para registrar productos, consultar el inventario y registrar entradas o salidas. La aplicación valida que una salida no sea mayor que el stock disponible y muestra el historial de movimientos. Los datos se mantienen durante la sesión del navegador; el almacenamiento permanente queda fuera del alcance actual.
