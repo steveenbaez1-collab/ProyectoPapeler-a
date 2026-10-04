@@ -58,6 +58,9 @@ document
         const cantidad =
             Number(document.getElementById("cantidad").value);
 
+        const stockMinimo =
+            Number(document.getElementById("stockMinimo").value);
+
 
         // Validar campos
         if (codigo === "" || nombre === "") {
@@ -77,6 +80,18 @@ document
             mostrarMensaje(
                 "mensajeProducto",
                 "La cantidad debe ser un número válido.",
+                "error"
+            );
+
+            return;
+        }
+
+
+        if (stockMinimo < 0 || isNaN(stockMinimo)) {
+
+            mostrarMensaje(
+                "mensajeProducto",
+                "El stock mínimo debe ser un número válido.",
                 "error"
             );
 
@@ -109,7 +124,8 @@ document
 
             codigo: codigo,
             nombre: nombre,
-            cantidad: cantidad
+            cantidad: cantidad,
+            stockMinimo: stockMinimo
 
         };
 
@@ -349,7 +365,7 @@ function actualizarTablaProductos() {
 
         tabla.innerHTML = `
             <tr>
-                <td colspan="3">
+                <td colspan="5">
                     No hay productos registrados.
                 </td>
             </tr>
@@ -363,11 +379,15 @@ function actualizarTablaProductos() {
 
         const fila = document.createElement("tr");
 
+        const estado = obtenerEstadoStock(producto);
+
 
         fila.innerHTML = `
             <td>${producto.codigo}</td>
             <td>${producto.nombre}</td>
             <td>${producto.cantidad}</td>
+            <td>${producto.stockMinimo}</td>
+            <td><span class="estado-stock ${estado.clase}">${estado.texto}</span></td>
         `;
 
 
@@ -394,7 +414,7 @@ function actualizarTablaInventario() {
 
         tabla.innerHTML = `
             <tr>
-                <td colspan="3">
+                <td colspan="5">
                     No hay productos registrados.
                 </td>
             </tr>
@@ -408,11 +428,15 @@ function actualizarTablaInventario() {
 
         const fila = document.createElement("tr");
 
+        const estado = obtenerEstadoStock(producto);
+
 
         fila.innerHTML = `
             <td>${producto.codigo}</td>
             <td>${producto.nombre}</td>
             <td>${producto.cantidad}</td>
+            <td>${producto.stockMinimo}</td>
+            <td><span class="estado-stock ${estado.clase}">${estado.texto}</span></td>
         `;
 
 
@@ -541,6 +565,13 @@ function actualizarResumen() {
             0
         );
 
+    const totalStockBajo =
+        productos.filter(function(producto) {
+
+            return producto.cantidad <= producto.stockMinimo;
+
+        }).length;
+
 
     document.getElementById("totalProductos").textContent =
         totalProductos;
@@ -548,6 +579,30 @@ function actualizarResumen() {
 
     document.getElementById("totalUnidades").textContent =
         totalUnidades;
+
+    document.getElementById("totalStockBajo").textContent =
+        totalStockBajo;
+}
+
+
+// ==========================================
+// ESTADO DEL STOCK
+// ==========================================
+
+function obtenerEstadoStock(producto) {
+
+    if (producto.cantidad <= producto.stockMinimo) {
+
+        return {
+            texto: "Stock bajo",
+            clase: "bajo"
+        };
+    }
+
+    return {
+        texto: "Disponible",
+        clase: "disponible"
+    };
 }
 
 
