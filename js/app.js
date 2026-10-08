@@ -75,11 +75,11 @@ document
         }
 
 
-        if (cantidad < 0 || isNaN(cantidad)) {
+        if (cantidad < 0 || !Number.isInteger(cantidad)) {
 
             mostrarMensaje(
                 "mensajeProducto",
-                "La cantidad debe ser un número válido.",
+                "La cantidad debe ser un número entero igual o mayor que cero.",
                 "error"
             );
 
@@ -87,11 +87,11 @@ document
         }
 
 
-        if (stockMinimo < 0 || isNaN(stockMinimo)) {
+        if (stockMinimo < 0 || !Number.isInteger(stockMinimo)) {
 
             mostrarMensaje(
                 "mensajeProducto",
-                "El stock mínimo debe ser un número válido.",
+                "El stock mínimo debe ser un número entero igual o mayor que cero.",
                 "error"
             );
 
@@ -183,11 +183,11 @@ document
         }
 
 
-        if (cantidad <= 0 || isNaN(cantidad)) {
+        if (cantidad <= 0 || !Number.isInteger(cantidad)) {
 
             mostrarMensaje(
                 "mensajeMovimiento",
-                "La cantidad debe ser mayor que cero.",
+                "La cantidad debe ser un número entero mayor que cero.",
                 "error"
             );
 
@@ -381,14 +381,17 @@ function actualizarTablaProductos() {
 
         const estado = obtenerEstadoStock(producto);
 
+        agregarCelda(fila, producto.codigo);
+        agregarCelda(fila, producto.nombre);
+        agregarCelda(fila, producto.cantidad);
+        agregarCelda(fila, producto.stockMinimo);
 
-        fila.innerHTML = `
-            <td>${producto.codigo}</td>
-            <td>${producto.nombre}</td>
-            <td>${producto.cantidad}</td>
-            <td>${producto.stockMinimo}</td>
-            <td><span class="estado-stock ${estado.clase}">${estado.texto}</span></td>
-        `;
+        const celdaEstado = document.createElement("td");
+        const etiquetaEstado = document.createElement("span");
+        etiquetaEstado.className = "estado-stock " + estado.clase;
+        etiquetaEstado.textContent = estado.texto;
+        celdaEstado.appendChild(etiquetaEstado);
+        fila.appendChild(celdaEstado);
 
 
         tabla.appendChild(fila);
@@ -430,14 +433,17 @@ function actualizarTablaInventario() {
 
         const estado = obtenerEstadoStock(producto);
 
+        agregarCelda(fila, producto.codigo);
+        agregarCelda(fila, producto.nombre);
+        agregarCelda(fila, producto.cantidad);
+        agregarCelda(fila, producto.stockMinimo);
 
-        fila.innerHTML = `
-            <td>${producto.codigo}</td>
-            <td>${producto.nombre}</td>
-            <td>${producto.cantidad}</td>
-            <td>${producto.stockMinimo}</td>
-            <td><span class="estado-stock ${estado.clase}">${estado.texto}</span></td>
-        `;
+        const celdaEstado = document.createElement("td");
+        const etiquetaEstado = document.createElement("span");
+        etiquetaEstado.className = "estado-stock " + estado.clase;
+        etiquetaEstado.textContent = estado.texto;
+        celdaEstado.appendChild(etiquetaEstado);
+        fila.appendChild(celdaEstado);
 
 
         tabla.appendChild(fila);
@@ -531,12 +537,10 @@ function actualizarTablaMovimientos() {
                 document.createElement("tr");
 
 
-            fila.innerHTML = `
-                <td>${movimiento.codigo}</td>
-                <td>${movimiento.tipo}</td>
-                <td>${movimiento.cantidad}</td>
-                <td>${movimiento.resultado}</td>
-            `;
+            agregarCelda(fila, movimiento.codigo);
+            agregarCelda(fila, movimiento.tipo);
+            agregarCelda(fila, movimiento.cantidad);
+            agregarCelda(fila, movimiento.resultado);
 
 
             tabla.appendChild(fila);
@@ -582,6 +586,15 @@ function actualizarResumen() {
 
     document.getElementById("totalStockBajo").textContent =
         totalStockBajo;
+}
+
+
+// Agregar valores como texto para que no se interpreten como HTML.
+function agregarCelda(fila, valor) {
+
+    const celda = document.createElement("td");
+    celda.textContent = valor;
+    fila.appendChild(celda);
 }
 
 

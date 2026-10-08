@@ -1,118 +1,78 @@
-# Estándares del equipo
+# Estándares del proyecto
 
-## 1. Contexto del proyecto
+## 1. Contexto
 
-Estos estándares aplican al **Sistema de Control de Inventario para Papelería**. El proyecto es una aplicación web estática desarrollada con **HTML5, CSS3 y JavaScript (ES6+)**, sin framework, y editada en **Visual Studio Code**. El repositorio se administra con Git y se publica en GitHub.
+Estos acuerdos corresponden al Sistema de Control de Inventario para Papelería, una aplicación web sin framework, desarrollada con HTML5, CSS3 y JavaScript en Visual Studio Code. El proyecto lo desarrolla Samuell Steveen Baez Diaz de manera individual, con autorización de la docente.
 
-## 2. Guía de estilo y nombres
+## 2. Estilo y nombres
 
-- HTML: se adopta el estándar [HTML Living Standard](https://html.spec.whatwg.org/).
-- CSS: se adopta la guía [MDN CSS](https://developer.mozilla.org/es/docs/Web/CSS).
-- JavaScript: se adopta la guía [JavaScript Standard Style](https://standardjs.com/).
-- El código, nombres de variables, funciones, clases, archivos y ramas se escriben en inglés. Los textos mostrados a la persona usuaria y los documentos del proyecto se escriben en español.
-- Visual Studio Code está configurado para formatear al guardar (`editor.formatOnSave`). También se puede usar la opción **Format Document** para mantener la indentación ordenada en HTML, CSS y JavaScript.
+- Para HTML se toma como referencia el HTML Living Standard; para CSS y JavaScript, las guías de MDN.
+- Los textos de la interfaz y la documentación se escriben en español. Los nombres del código siguen el idioma usado actualmente en el proyecto: español.
+- El proyecto usa el formateo integrado de Visual Studio Code y tiene activado `editor.formatOnSave` en `.vscode/settings.json`. También se puede aplicar **Format Document**.
 
-### Reglas propias de nombres
+Reglas propias de nombres:
 
-1. Las variables y funciones de JavaScript usan `camelCase` y expresan una acción o dato concreto: `actualizarInventario`, `cantidadDisponible`.
-2. Las clases CSS usan minúsculas y guiones (`kebab-case`): `.boton-principal`, `.tabla-contenedor`.
-3. Los archivos se nombran en minúscula; los documentos raíz requeridos conservan su nombre convencional: `index.html`, `app.js`, `estilos.css`, `README.md` y `ESTANDARES.md`.
+1. Las variables y funciones de JavaScript usan `camelCase` y nombres que describen su dato o acción, por ejemplo `stockMinimo` y `actualizarInterfaz`.
+2. Las clases CSS usan minúsculas separadas por guiones, por ejemplo `.boton-principal` y `.tabla-contenedor`.
+3. Los archivos de código usan nombres en minúscula; los documentos conservan los nombres acordados, como `README.md` y `ESTANDARES.md`.
 
-## 3. Convención de commits y ramas
+## 3. Commits y ramas
 
-Cada commit debe usar el formato:
+Formato del mensaje:
 
 ```text
 tipo(alcance): descripción breve en español
 ```
 
-Tipos permitidos:
+Tipos permitidos: `feat` (funcionalidad), `fix` (corrección), `docs` (documentación), `style` (presentación o formato), `refactor` (reorganización), `test` (pruebas) y `chore` (mantenimiento).
 
-- `feat`: nueva funcionalidad.
-- `fix`: corrección de un error.
-- `docs`: cambios en documentación.
-- `style`: formato o estilos sin modificar lógica.
-- `refactor`: reorganización sin modificar el comportamiento.
-- `test`: pruebas o verificaciones.
-- `chore`: configuración o mantenimiento.
+Ejemplos: `feat(inventario): mostrar productos con stock bajo`; `fix(productos): validar cantidades enteras`; `docs(estandares): ajustar acuerdos del proyecto`.
 
-Ejemplos válidos:
-
-```text
-feat(inventario): registrar entradas de productos
-fix(salidas): impedir cantidades superiores al stock
-docs(estandares): agregar acuerdos del equipo
-```
-
-Esquema de ramas:
-
-- `main`: versión estable y entregable del proyecto.
-- `feat/nombre-corto`: una funcionalidad nueva que requiere varios cambios.
-- `fix/nombre-corto`: una corrección.
-- `docs/nombre-corto`: documentación.
-
-Los cambios pequeños de documentación pueden hacerse directamente en `main` después de la revisión definida en este documento. Las funcionalidades o correcciones que requieran varios cambios se trabajan en su rama y luego se integran en `main`.
+La rama `main` contiene la versión entregable. Para un cambio que lo justifique se pueden usar ramas `feat/nombre-corto`, `fix/nombre-corto` o `docs/nombre-corto`; no se exige una rama `develop` para este proyecto individual.
 
 ## 4. Definition of Ready
 
-Una tarea puede empezar solo si cumple todas estas condiciones:
+Una tarea está lista para comenzar cuando:
 
-1. Tiene un título y una descripción que indiquen qué parte del sistema se modificará.
-2. Indica criterios de aceptación observables, por ejemplo: “al registrar una salida mayor al stock, la aplicación muestra un mensaje de rechazo y no reduce la cantidad disponible”.
-3. Identifica los archivos o la sección afectada (`index.html`, `css/estilos.css` o `js/app.js`).
-4. El equipo conoce los datos necesarios para probarla (producto, cantidad inicial y movimiento esperado cuando aplique).
-5. No contradice la regla de negocio: una salida no puede dejar el inventario con cantidades negativas.
+1. Tiene una descripción de qué se necesita cambiar.
+2. Define un resultado que se pueda observar en la aplicación o en sus archivos.
+3. Identifica la sección o archivos relacionados (`index.html`, `css/estilos.css`, `js/app.js` o documentación).
+4. Cuenta con los datos necesarios para verificar el resultado, cuando aplique.
+5. No contradice el alcance ni la regla de negocio de impedir salidas superiores al stock disponible.
 
 ## 5. Definition of Done
 
-Una tarea está terminada solo cuando un tercero pueda comprobar todos estos puntos al abrir el repositorio:
+Una tarea se considera terminada cuando se puede comprobar que:
 
-1. El cambio está en una rama apropiada y su commit sigue la convención definida en este documento.
-2. Los archivos modificados tienen una indentación ordenada y se guardaron con el formateo automático de Visual Studio Code.
-3. La funcionalidad cumple los criterios de aceptación de la tarea al abrir `index.html` en un navegador.
-4. Si modifica inventario, se verificaron una entrada, una salida válida y una salida rechazada por superar el stock; el resultado queda visible en la interfaz o en el historial de movimientos.
-5. No hay errores en la consola del navegador al ejecutar el flujo afectado.
-6. Antes de integrar el cambio, se realizó una revisión con la lista de criterios de aceptación y se registró el resultado en el commit, issue o evidencia acordada.
-7. Si se usó una rama de trabajo, el cambio está integrado en `main` sin conflictos.
+1. El cambio está guardado en los archivos del repositorio y el commit usa el formato acordado.
+2. La aplicación abre desde `index.html` y muestra la sección modificada.
+3. El resultado cumple el criterio descrito para la tarea.
+4. Los flujos de inventario afectados se registran con datos, resultado esperado y resultado observado en `PRUEBAS.md`.
+5. Una salida superior a las existencias no reduce el stock y muestra el rechazo.
+6. El autor revisó el diff y comprobó los criterios antes de integrar el cambio; la evidencia queda en el historial del repositorio o en `PRUEBAS.md`.
+7. Al repetir el flujo afectado, la consola del navegador no muestra errores de JavaScript.
 
-## 6. Política de revisión de código
+## 6. Política de revisión
 
-### Quién revisa y plazo
+Como el proyecto es individual y cuenta con autorización docente, Samuell revisa cada cambio antes de integrarlo: compara el diff con el criterio de aceptación y ejecuta los casos afectados. Esta auto-revisión se realiza antes del commit o de integrar una rama, no después de una solicitud a otra persona. Si la docente o un compañero ofrece revisión, se consideran sus observaciones dentro de las siguientes 24 horas de recibirlas.
 
-El proyecto cuenta con autorización docente para ser desarrollado por un solo integrante. Por esta razón, Samuell Steveen Baez Diaz realiza una revisión separada de su propia implementación antes de integrar cada cambio. La revisión debe realizarse dentro de las 24 horas posteriores a terminar la tarea y comprobar los criterios de aceptación definidos.
+Bloquean la integración:
 
-### Causales que bloquean la integración
+- Una salida mayor que el stock reduce las existencias o deja una cantidad negativa.
+- El cambio no cumple el criterio observable de la tarea.
+- El flujo afectado produce un error de JavaScript en la consola.
+- El commit no respeta el formato acordado o incluye credenciales/datos sensibles.
 
-- La salida permite retirar una cantidad superior al stock disponible o deja el stock negativo.
-- La funcionalidad no cumple un criterio de aceptación definido.
-- El navegador muestra un error de JavaScript al realizar el flujo afectado.
-- El commit no sigue la convención acordada o el código tiene una indentación desordenada.
-- El cambio incluye credenciales, contraseñas o datos sensibles.
+No bloquean la integración:
 
-### Situaciones que no bloquean la integración
+- Sugerencias de nombres que no afectan la comprensión ni el funcionamiento.
+- Mejoras visuales que no forman parte de la tarea.
+- Funcionalidades futuras fuera del alcance actual.
 
-- Sugerencias de nombres que no alteran la comprensión ni el funcionamiento.
-- Mejoras visuales o funcionalidades futuras que no pertenecen a la tarea revisada.
-- Preferencias de formato que se pueden corregir usando **Format Document**.
-
-### Cómo se comenta
-
-Los comentarios se dirigen al código, nunca a la persona. Deben indicar el archivo o sección, el problema comprobable, el impacto y una propuesta concreta cuando sea posible.
-
-Ejemplo: “En `js/app.js`, la salida no valida la cantidad disponible antes de descontar el stock. Esto permitiría cantidades negativas. Validar `cantidad > producto.cantidad` antes de actualizar el producto.”
+Los comentarios deben señalar archivo o sección, comportamiento observado, impacto y una corrección sugerida. Se refieren al código, no a la persona.
 
 ## 7. Aceptación
 
 | Integrante | Aceptación |
 | --- | --- |
-| Samuell Steveen Baez Diaz | Conozco y acepto estos estándares. |
-
-> El proyecto se desarrolla de manera individual con autorización de la docente, debido a que no fue posible conformar pareja de trabajo.
-
-## 8. Declaración de uso de IA
-
-Se utilizó ChatGPT como apoyo para organizar una primera versión del documento de estándares. El equipo revisó y ajustó manualmente el contenido para que corresponda a este proyecto, sus tecnologías y sus acuerdos de trabajo.
-
-## 9. Estado inicial del proyecto
-
-Al publicar este documento, el proyecto cuenta con una interfaz web para registrar productos, consultar el inventario y registrar entradas o salidas. La aplicación valida que una salida no sea mayor que el stock disponible y muestra el historial de movimientos. Los datos se mantienen durante la sesión del navegador; el almacenamiento permanente queda fuera del alcance actual.
+| Samuell Steveen Baez Diaz | conozco y acepto estos estándares |
