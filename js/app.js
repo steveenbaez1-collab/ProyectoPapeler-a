@@ -683,6 +683,10 @@ document
     .getElementById("exportarInventario")
     .addEventListener("click", exportarInventarioCSV);
 
+document
+    .getElementById("exportarMovimientos")
+    .addEventListener("click", exportarMovimientosCSV);
+
 
 function exportarInventarioCSV() {
 
@@ -716,6 +720,49 @@ function exportarInventarioCSV() {
 
     descargarCSV(contenido, "inventario-papeleria.csv");
     mostrarMensaje("mensajeExportacion", "Inventario exportado correctamente.", "exito");
+}
+
+
+function exportarMovimientosCSV() {
+
+    if (movimientos.length === 0) {
+        mostrarMensaje(
+            "mensajeExportacionMovimientos",
+            "No hay movimientos para exportar.",
+            "error"
+        );
+        return;
+    }
+
+    const filas = [
+        ["Código", "Tipo", "Cantidad", "Resultado", "Fecha y hora"],
+        ...movimientos.map(function(movimiento) {
+            const fecha = movimiento.fecha
+                ? new Date(movimiento.fecha).toLocaleString("es-CO")
+                : "Sin fecha";
+
+            return [
+                movimiento.codigo,
+                movimiento.tipo,
+                movimiento.cantidad,
+                movimiento.resultado,
+                fecha
+            ];
+        })
+    ];
+
+    const contenido = filas
+        .map(function(fila) {
+            return fila.map(escaparValorCSV).join(";");
+        })
+        .join("\r\n");
+
+    descargarCSV(contenido, "movimientos-papeleria.csv");
+    mostrarMensaje(
+        "mensajeExportacionMovimientos",
+        "Historial exportado correctamente.",
+        "exito"
+    );
 }
 
 
