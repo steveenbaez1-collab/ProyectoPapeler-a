@@ -2,11 +2,14 @@
 // SISTEMA DE CONTROL DE INVENTARIO
 // ==========================================
 
+// Recuperar los datos guardados en este navegador.
+const datosGuardados = cargarDatos();
+
 // Lista de productos
-let productos = [];
+let productos = datosGuardados.productos;
 
 // Lista de movimientos
-let movimientos = [];
+let movimientos = datosGuardados.movimientos;
 
 
 // ==========================================
@@ -336,6 +339,8 @@ function registrarMovimiento(
 
 function actualizarInterfaz() {
 
+    guardarDatos();
+
     actualizarTablaProductos();
 
     actualizarTablaInventario();
@@ -589,6 +594,47 @@ function actualizarResumen() {
 }
 
 
+// Leer los datos guardados. Si no existen o están dañados, iniciar vacío.
+function cargarDatos() {
+
+    try {
+        const datos = localStorage.getItem("inventarioPapeleria");
+
+        if (!datos) {
+            return { productos: [], movimientos: [] };
+        }
+
+        const contenido = JSON.parse(datos);
+
+        return {
+            productos: Array.isArray(contenido.productos)
+                ? contenido.productos
+                : [],
+            movimientos: Array.isArray(contenido.movimientos)
+                ? contenido.movimientos
+                : []
+        };
+    } catch (error) {
+        console.error("No se pudieron recuperar los datos del inventario.", error);
+        return { productos: [], movimientos: [] };
+    }
+}
+
+
+// Guardar productos y movimientos en el almacenamiento local del navegador.
+function guardarDatos() {
+
+    try {
+        localStorage.setItem("inventarioPapeleria", JSON.stringify({
+            productos: productos,
+            movimientos: movimientos
+        }));
+    } catch (error) {
+        console.error("No se pudieron guardar los datos del inventario.", error);
+    }
+}
+
+
 // Agregar valores como texto para que no se interpreten como HTML.
 function agregarCelda(fila, valor) {
 
@@ -648,4 +694,8 @@ function mostrarMensaje(
 
     }, 4000);
 }
+
+
+// Dibujar el estado recuperado al abrir o recargar la aplicación.
+actualizarInterfaz();
 

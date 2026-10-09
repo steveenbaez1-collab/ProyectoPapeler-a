@@ -12,9 +12,11 @@ Fecha de revisión: 3 de octubre de 2026
 | CP-02 | Registrar entrada | Producto P001, entrada de 2 unidades | La cantidad sube de 3 a 5 y el estado cambia a disponible | Aprobado |
 | CP-03 | Registrar salida válida | Producto P001, salida de 2 unidades | La cantidad baja de 5 a 3 y el movimiento queda registrado | Aprobado |
 | CP-04 | Rechazar salida mayor al stock | Producto P001, salida de 4 unidades cuando hay 3 disponibles | El sistema no descuenta unidades y muestra mensaje de error | Aprobado |
+| CP-05 | Conservar datos al recargar | Registrar un producto y un movimiento; recargar la página | El producto, las cantidades y el movimiento continúan visibles | Pendiente de ejecución |
 
 ## Observaciones
 
 - La validación principal del proyecto se cumple: una salida no puede superar el stock disponible.
 - El stock bajo se identifica cuando la cantidad disponible es menor o igual al stock mínimo registrado.
-- El proyecto todavía no guarda datos de forma permanente; al recargar la página se debe volver a registrar la información.
+- Los datos se guardan en el almacenamiento local del navegador, pero no se sincronizan con otros dispositivos.
+- CP-05 debe ejecutarse en el navegador antes de marcarse como aprobado. Los datos se guardan solo en el navegador actual.

@@ -15,6 +15,7 @@ Proyecto web sencillo para controlar productos, cantidades disponibles, entradas
 - Registro de movimientos de entrada y salida.
 - Validación para impedir salidas mayores al stock disponible.
 - Identificación de productos con stock bajo.
+- Conservación de productos y movimientos al recargar la página, usando el almacenamiento local del navegador.
 
 ## Cómo ejecutar el proyecto
 
@@ -28,4 +29,4 @@ No se puede registrar una salida de producto si la cantidad solicitada es mayor 
 
 ## Estado del proyecto
 
-El sistema ya permite registrar productos, consultar inventario y manejar movimientos básicos. Los datos se manejan en memoria durante la ejecución de la página, por lo que al recargar el navegador se reinicia la información.
+El sistema permite registrar productos, consultar inventario y manejar movimientos básicos. Los datos se conservan en el almacenamiento local del navegador utilizado; no se sincronizan entre dispositivos ni navegadores distintos.
