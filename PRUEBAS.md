@@ -16,6 +16,7 @@ Fecha de revisión: 3 de octubre de 2026
 | CP-06 | Buscar producto | Escribir parte del código o nombre en cada buscador | Solo aparecen las coincidencias y la tabla informa cuando no hay resultados | Pendiente de ejecución |
 | CP-07 | Filtrar por estado | Elegir “Stock bajo” o “Disponibles” en el inventario | La tabla muestra únicamente productos del estado seleccionado | Pendiente de ejecución |
 | CP-08 | Consultar fecha del movimiento | Registrar una entrada o salida | El historial muestra fecha y hora del movimiento | Pendiente de ejecución |
+| CP-09 | Filtrar historial | Seleccionar “Solo entradas” o “Solo salidas” | El historial muestra únicamente el tipo elegido | Pendiente de ejecución |
 
 ## Observaciones
 

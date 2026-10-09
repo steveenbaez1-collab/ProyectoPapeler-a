@@ -577,9 +577,28 @@ function actualizarTablaMovimientos() {
     }
 
 
-    movimientos
+    const tipoSeleccionado = document
+        .getElementById("filtroTipoMovimiento")
+        .value;
+
+    const movimientosVisibles = movimientos
         .slice()
         .reverse()
+        .filter(function(movimiento) {
+            return tipoSeleccionado === "todos" ||
+                movimiento.tipo === tipoSeleccionado;
+        });
+
+    if (movimientosVisibles.length === 0) {
+        tabla.innerHTML = `
+            <tr>
+                <td colspan="5">No hay movimientos para este filtro.</td>
+            </tr>
+        `;
+        return;
+    }
+
+    movimientosVisibles
         .forEach(function(movimiento) {
 
             const fila =
@@ -655,6 +674,10 @@ document
 document
     .getElementById("filtroEstadoInventario")
     .addEventListener("change", actualizarTablaInventario);
+
+document
+    .getElementById("filtroTipoMovimiento")
+    .addEventListener("change", actualizarTablaMovimientos);
 
 
 // Leer los datos guardados. Si no existen o están dañados, iniciar vacío.
