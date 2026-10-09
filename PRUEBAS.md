@@ -13,6 +13,7 @@ Fecha de revisión: 3 de octubre de 2026
 | CP-03 | Registrar salida válida | Producto P001, salida de 2 unidades | La cantidad baja de 5 a 3 y el movimiento queda registrado | Aprobado |
 | CP-04 | Rechazar salida mayor al stock | Producto P001, salida de 4 unidades cuando hay 3 disponibles | El sistema no descuenta unidades y muestra mensaje de error | Aprobado |
 | CP-05 | Conservar datos al recargar | Registrar un producto y un movimiento; recargar la página | El producto, las cantidades y el movimiento continúan visibles | Pendiente de ejecución |
+| CP-06 | Buscar producto | Escribir parte del código o nombre en cada buscador | Solo aparecen las coincidencias y la tabla informa cuando no hay resultados | Pendiente de ejecución |
 
 ## Observaciones
 

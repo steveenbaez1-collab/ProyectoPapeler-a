@@ -380,7 +380,25 @@ function actualizarTablaProductos() {
     }
 
 
-    productos.forEach(function(producto) {
+    const textoBusqueda = document
+        .getElementById("buscarProductos")
+        .value.trim().toLowerCase();
+
+    const productosVisibles = productos.filter(function(producto) {
+        return producto.codigo.toLowerCase().includes(textoBusqueda) ||
+            producto.nombre.toLowerCase().includes(textoBusqueda);
+    });
+
+    if (productosVisibles.length === 0) {
+        tabla.innerHTML = `
+            <tr>
+                <td colspan="5">No se encontraron productos con esa búsqueda.</td>
+            </tr>
+        `;
+        return;
+    }
+
+    productosVisibles.forEach(function(producto) {
 
         const fila = document.createElement("tr");
 
@@ -432,7 +450,25 @@ function actualizarTablaInventario() {
     }
 
 
-    productos.forEach(function(producto) {
+    const textoBusqueda = document
+        .getElementById("buscarInventario")
+        .value.trim().toLowerCase();
+
+    const productosVisibles = productos.filter(function(producto) {
+        return producto.codigo.toLowerCase().includes(textoBusqueda) ||
+            producto.nombre.toLowerCase().includes(textoBusqueda);
+    });
+
+    if (productosVisibles.length === 0) {
+        tabla.innerHTML = `
+            <tr>
+                <td colspan="5">No se encontraron productos con esa búsqueda.</td>
+            </tr>
+        `;
+        return;
+    }
+
+    productosVisibles.forEach(function(producto) {
 
         const fila = document.createElement("tr");
 
@@ -592,6 +628,15 @@ function actualizarResumen() {
     document.getElementById("totalStockBajo").textContent =
         totalStockBajo;
 }
+
+
+document
+    .getElementById("buscarProductos")
+    .addEventListener("input", actualizarTablaProductos);
+
+document
+    .getElementById("buscarInventario")
+    .addEventListener("input", actualizarTablaInventario);
 
 
 // Leer los datos guardados. Si no existen o están dañados, iniciar vacío.
