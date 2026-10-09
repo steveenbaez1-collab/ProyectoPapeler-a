@@ -14,6 +14,7 @@ Proyecto web sencillo para controlar productos, cantidades disponibles, entradas
 - Consulta del inventario disponible.
 - Búsqueda de productos por código o nombre en las tablas de productos e inventario.
 - Filtro del inventario por productos disponibles o con stock bajo.
+- Exportación del inventario a un archivo CSV.
 - Registro de movimientos de entrada y salida.
 - Historial de movimientos con fecha y hora de registro.
 - Filtro del historial para consultar entradas o salidas por separado.

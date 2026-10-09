@@ -679,6 +679,74 @@ document
     .getElementById("filtroTipoMovimiento")
     .addEventListener("change", actualizarTablaMovimientos);
 
+document
+    .getElementById("exportarInventario")
+    .addEventListener("click", exportarInventarioCSV);
+
+
+function exportarInventarioCSV() {
+
+    if (productos.length === 0) {
+        mostrarMensaje(
+            "mensajeExportacion",
+            "No hay productos para exportar.",
+            "error"
+        );
+        return;
+    }
+
+    const filas = [
+        ["Código", "Producto", "Cantidad disponible", "Stock mínimo", "Estado"],
+        ...productos.map(function(producto) {
+            return [
+                producto.codigo,
+                producto.nombre,
+                producto.cantidad,
+                producto.stockMinimo,
+                obtenerEstadoStock(producto).texto
+            ];
+        })
+    ];
+
+    const contenido = filas
+        .map(function(fila) {
+            return fila.map(escaparValorCSV).join(";");
+        })
+        .join("\r\n");
+
+    descargarCSV(contenido, "inventario-papeleria.csv");
+    mostrarMensaje("mensajeExportacion", "Inventario exportado correctamente.", "exito");
+}
+
+
+function escaparValorCSV(valor) {
+
+    let texto = String(valor);
+
+    if (/^[\t\r ]*[=+\-@]/.test(texto)) {
+        texto = "'" + texto;
+    }
+
+    return "\"" + texto.replace(/\"/g, "\"\"") + "\"";
+}
+
+
+function descargarCSV(contenido, nombreArchivo) {
+
+    const archivo = new Blob(["\uFEFF", contenido], {
+        type: "text/csv;charset=utf-8"
+    });
+    const enlace = document.createElement("a");
+    const url = URL.createObjectURL(archivo);
+
+    enlace.href = url;
+    enlace.download = nombreArchivo;
+    enlace.click();
+    setTimeout(function() {
+        URL.revokeObjectURL(url);
+    }, 0);
+}
+
 
 // Leer los datos guardados. Si no existen o están dañados, iniciar vacío.
 function cargarDatos() {

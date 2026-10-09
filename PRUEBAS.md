@@ -17,6 +17,7 @@ Fecha de revisión: 3 de octubre de 2026
 | CP-07 | Filtrar por estado | Elegir “Stock bajo” o “Disponibles” en el inventario | La tabla muestra únicamente productos del estado seleccionado | Pendiente de ejecución |
 | CP-08 | Consultar fecha del movimiento | Registrar una entrada o salida | El historial muestra fecha y hora del movimiento | Pendiente de ejecución |
 | CP-09 | Filtrar historial | Seleccionar “Solo entradas” o “Solo salidas” | El historial muestra únicamente el tipo elegido | Pendiente de ejecución |
+| CP-10 | Exportar inventario | Registrar productos y pulsar “Exportar inventario a CSV” | Se descarga un CSV con código, nombre, cantidades y estado | Pendiente de ejecución |
 
 ## Observaciones
 
