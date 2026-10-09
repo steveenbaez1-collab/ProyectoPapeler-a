@@ -453,10 +453,17 @@ function actualizarTablaInventario() {
     const textoBusqueda = document
         .getElementById("buscarInventario")
         .value.trim().toLowerCase();
+    const estadoSeleccionado = document
+        .getElementById("filtroEstadoInventario")
+        .value;
 
     const productosVisibles = productos.filter(function(producto) {
-        return producto.codigo.toLowerCase().includes(textoBusqueda) ||
+        const coincideBusqueda = producto.codigo.toLowerCase().includes(textoBusqueda) ||
             producto.nombre.toLowerCase().includes(textoBusqueda);
+        const coincideEstado = estadoSeleccionado === "todos" ||
+            obtenerEstadoStock(producto).clase === estadoSeleccionado;
+
+        return coincideBusqueda && coincideEstado;
     });
 
     if (productosVisibles.length === 0) {
@@ -637,6 +644,10 @@ document
 document
     .getElementById("buscarInventario")
     .addEventListener("input", actualizarTablaInventario);
+
+document
+    .getElementById("filtroEstadoInventario")
+    .addEventListener("change", actualizarTablaInventario);
 
 
 // Leer los datos guardados. Si no existen o están dañados, iniciar vacío.

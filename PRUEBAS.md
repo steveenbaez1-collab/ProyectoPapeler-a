@@ -14,6 +14,7 @@ Fecha de revisión: 3 de octubre de 2026
 | CP-04 | Rechazar salida mayor al stock | Producto P001, salida de 4 unidades cuando hay 3 disponibles | El sistema no descuenta unidades y muestra mensaje de error | Aprobado |
 | CP-05 | Conservar datos al recargar | Registrar un producto y un movimiento; recargar la página | El producto, las cantidades y el movimiento continúan visibles | Pendiente de ejecución |
 | CP-06 | Buscar producto | Escribir parte del código o nombre en cada buscador | Solo aparecen las coincidencias y la tabla informa cuando no hay resultados | Pendiente de ejecución |
+| CP-07 | Filtrar por estado | Elegir “Stock bajo” o “Disponibles” en el inventario | La tabla muestra únicamente productos del estado seleccionado | Pendiente de ejecución |
 
 ## Observaciones
 
