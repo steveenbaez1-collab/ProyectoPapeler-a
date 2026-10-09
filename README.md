@@ -15,6 +15,7 @@ Proyecto web sencillo para controlar productos, cantidades disponibles, entradas
 - Búsqueda de productos por código o nombre en las tablas de productos e inventario.
 - Filtro del inventario por productos disponibles o con stock bajo.
 - Registro de movimientos de entrada y salida.
+- Historial de movimientos con fecha y hora de registro.
 - Validación para impedir salidas mayores al stock disponible.
 - Identificación de productos con stock bajo.
 - Conservación de productos y movimientos al recargar la página, usando el almacenamiento local del navegador.

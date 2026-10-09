@@ -324,7 +324,8 @@ function registrarMovimiento(
         codigo: producto.codigo,
         tipo: tipo,
         cantidad: cantidad,
-        resultado: resultado
+        resultado: resultado,
+        fecha: new Date().toISOString()
 
     };
 
@@ -566,7 +567,7 @@ function actualizarTablaMovimientos() {
 
         tabla.innerHTML = `
             <tr>
-                <td colspan="4">
+                <td colspan="5">
                     No hay movimientos registrados.
                 </td>
             </tr>
@@ -589,6 +590,12 @@ function actualizarTablaMovimientos() {
             agregarCelda(fila, movimiento.tipo);
             agregarCelda(fila, movimiento.cantidad);
             agregarCelda(fila, movimiento.resultado);
+            agregarCelda(
+                fila,
+                movimiento.fecha
+                    ? new Date(movimiento.fecha).toLocaleString("es-CO")
+                    : "Sin fecha"
+            );
 
 
             tabla.appendChild(fila);
