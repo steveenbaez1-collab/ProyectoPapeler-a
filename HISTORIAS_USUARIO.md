@@ -1,6 +1,6 @@
 # Backlog de producto — Sistema de Control de Inventario para Papelería
 
-Backlog de 11 historias derivadas del alcance del acta. Está ordenado por prioridad (alta, media y baja); dentro de cada grupo se conservan primero las capacidades centrales del inventario. La columna Estado refleja la evidencia disponible en `PRUEBAS.md`, no solo que exista código. Estimación: story points relativos en escala Fibonacci (1, 2, 3, 5, 8); no son horas.
+Estas son las historias de usuario que definí para el sistema, teniendo en cuenta lo que se acordó en el acta del proyecto. Las organicé por prioridad y les asigné puntos para comparar el esfuerzo; los puntos no representan horas. En Estado anoté si la función ya está probada o si todavía me falta revisarla.
 
 | ID | Historia de usuario | Puntos | Estado | Responsable |
 | --- | --- | ---: | --- | --- |
@@ -22,13 +22,13 @@ Backlog de 11 historias derivadas del alcance del acta. Está ordenado por prior
 - Puntos terminados con pruebas aprobadas: **11**.
 - Puntos en curso o pendientes de validación: **20**.
 
-Estos totales describen el estado actual del backlog completo; no son la velocidad de un sprint.
+Estos números corresponden a todas las historias del proyecto. No significan que pueda terminar los 31 puntos en un solo sprint.
 
 ## Planificación propuesta — Sprint 1 (primera clase de semana 12)
 
-Esta es una propuesta para llevar a la sesión y ratificarla con la capacidad real de trabajo individual. El proyecto cuenta con autorización docente para trabajarse individualmente. Por eso, los puntos seleccionados no se presentan como una capacidad ya medida.
+Como estoy trabajando solo con autorización de la profesora, preparé esta propuesta para revisarla en la primera clase de la semana 12. Todavía debo confirmar que el trabajo seleccionado se ajuste al tiempo que tengo.
 
-**Objetivo propuesto:** Al finalizar el Sprint 1, el encargado podrá consultar las existencias actuales y revisar un historial de movimientos fechado, con ambas funciones verificadas y conformes a los criterios de aceptación.
+**Objetivo propuesto:** En este sprint quiero comprobar que se puedan consultar las existencias y revisar el historial de movimientos con su fecha y hora.
 
 | ID | Historia seleccionada | Puntos |
 | --- | --- | ---: |
@@ -36,7 +36,7 @@ Esta es una propuesta para llevar a la sesión y ratificarla con la capacidad re
 | HU-05 | Consultar el historial de movimientos con fecha y hora | 3 |
 | **Total propuesto** |  | **5** |
 
-La selección sigue el orden del backlog entre las historias aún no validadas. Antes de comprometerla en clase, Samuell debe comprobar que los 5 puntos caben en las horas reales que tendrá durante las dos semanas. Si no caben, se reduce y vuelve a acordar el sprint backlog y se ajusta también el objetivo; no se agregan historias por completar una cantidad arbitraria.
+Escogí estas dos historias porque todavía tengo pendientes sus pruebas. En clase revisaré si alcanzo a trabajar los 5 puntos durante el sprint. Si el tiempo no me alcanza, ajustaré la selección y el objetivo con lo que se acuerde; no quiero escoger historias solo para completar un número de puntos.
 
 ### Criterios de aceptación de las historias seleccionadas
 
@@ -54,11 +54,11 @@ La selección sigue el orden del backlog entre las historias aún no validadas. 
 
 ### Tarjetas para el tablero
 
-Al cerrar la planificación en clase, crear o mover las tarjetas **HU-02** y **HU-05** a la columna **Por hacer**, conservando sus puntos. No iniciar una historia hasta que cumpla la Definition of Ready. Aplicar la Definition of Done de `ESTANDARES.md` antes de mover una tarjeta a Terminado.
+Cuando confirme la planificación en clase, pondré las tarjetas **HU-02** y **HU-05** en la columna **Por hacer** del tablero y conservaré los puntos asignados. Antes de empezar cada historia revisaré que esté lista según la Definition of Ready. La moveré a **Terminado** cuando cumpla la Definition of Done de `ESTANDARES.md`.
 
 ## Nota sobre el estado real y el incremento
 
-El código ya contiene las funciones seleccionadas; los casos de prueba correspondientes aún no están aprobados. Por tanto, este sprint se plantea como aceptación, corrección de hallazgos y cierre verificable de la Definition of Done, no como si esas funciones fueran nuevas. Si la docente exige que el incremento agregue una capacidad que el usuario todavía no tenga, se debe acordar con ella una historia adicional dentro del alcance antes de cerrar la planificación; no se inventa una necesidad del cliente.
+Las dos funciones ya aparecen en el código, pero todavía me falta completar sus pruebas. Por eso, en este sprint me enfocaré en comprobarlas y corregir lo que encuentre. Si la profesora pide que el sprint incluya una función nueva, revisaré con ella qué historia se puede agregar sin salirme del alcance del proyecto.
 
 ## Alcance
 
