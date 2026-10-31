@@ -1,8 +1,8 @@
-﻿# Pruebas del sistema
+# Pruebas del sistema
 
 Sistema: Control de Inventario para Papelería
 
-Fecha de revisión: 3 de octubre de 2026
+Fecha de revisión: 30 de octubre de 2026
 
 ## Casos revisados
 
@@ -15,14 +15,24 @@ Fecha de revisión: 3 de octubre de 2026
 | CP-05 | Conservar datos al recargar | Registrar un producto y un movimiento; recargar la página | El producto, las cantidades y el movimiento continúan visibles | Pendiente de ejecución |
 | CP-06 | Buscar producto | Escribir parte del código o nombre en cada buscador | Solo aparecen las coincidencias y la tabla informa cuando no hay resultados | Pendiente de ejecución |
 | CP-07 | Filtrar por estado | Elegir “Stock bajo” o “Disponibles” en el inventario | La tabla muestra únicamente productos del estado seleccionado | Pendiente de ejecución |
-| CP-08 | Consultar fecha del movimiento | Registrar una entrada o salida | El historial muestra fecha y hora del movimiento | Pendiente de ejecución |
+| CP-08 | Consultar fecha del movimiento | Registrar una entrada y una salida para TST001 | Ambas filas aparecen con tipo, cantidad, resultado y fecha/hora local | Aprobado |
 | CP-09 | Filtrar historial | Seleccionar “Solo entradas” o “Solo salidas” | El historial muestra únicamente el tipo elegido | Pendiente de ejecución |
 | CP-10 | Exportar inventario | Registrar productos y pulsar “Exportar inventario a CSV” | Se descarga un CSV con código, nombre, cantidades y estado | Pendiente de ejecución |
 | CP-11 | Exportar movimientos | Registrar una entrada o salida y pulsar “Exportar movimientos a CSV” | Se descarga un CSV con código, tipo, cantidad, resultado y fecha | Pendiente de ejecución |
+| CP-12 | Consultar existencias después de movimientos | TST001 con cantidad inicial 10; registrar entrada de 2 y salida de 1 | El inventario muestra 11 unidades disponibles y el producto en la tabla | Aprobado |
+
+## Detalle de la revisión del 30 de octubre
+
+Se probó la aplicación en el navegador con el producto de prueba TST001, sin datos precargados. La consulta de inventario mostró el código, nombre, cantidad disponible, stock mínimo y estado del producto. Luego de registrar una entrada de 2 unidades y una salida de 1, la consulta mostró 11 unidades, que corresponde a 10 + 2 - 1.
+
+El historial mostró la entrada de 2 unidades como “Registrada” el 30/10/2026 a las 8:15:57 p. m. y la salida de 1 unidad como “Registrada” el 30/10/2026 a las 8:16:08 p. m. No se probaron en esta revisión la recarga de la página, los filtros ni la exportación CSV.
 
 ## Observaciones
 
-- La validación principal del proyecto se cumple: una salida no puede superar el stock disponible.
-- El stock bajo se identifica cuando la cantidad disponible es menor o igual al stock mínimo registrado.
-- Los datos se guardan en el almacenamiento local del navegador, pero no se sincronizan con otros dispositivos.
-- CP-05 debe ejecutarse en el navegador antes de marcarse como aprobado. Los datos se guardan solo en el navegador actual.
+La regla de rechazo de salidas que superan el stock está respaldada por CP-04, aprobada en la revisión anterior.
+
+El sistema identifica stock bajo cuando la cantidad disponible es menor o igual al stock mínimo registrado.
+
+Los datos se guardan en el almacenamiento local del navegador y no se sincronizan entre dispositivos.
+
+CP-05 continúa pendiente. Debe probarse en el navegador antes de marcarla aprobada.
