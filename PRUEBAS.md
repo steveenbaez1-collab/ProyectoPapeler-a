@@ -12,7 +12,7 @@ Fecha de revisión: 30 de octubre de 2026
 | CP-02 | Registrar entrada | Producto P001, entrada de 2 unidades | La cantidad sube de 3 a 5 y el estado cambia a disponible | Aprobado |
 | CP-03 | Registrar salida válida | Producto P001, salida de 2 unidades | La cantidad baja de 5 a 3 y el movimiento queda registrado | Aprobado |
 | CP-04 | Rechazar salida mayor al stock | Producto P001, salida de 4 unidades cuando hay 3 disponibles | El sistema no descuenta unidades y muestra mensaje de error | Aprobado |
-| CP-05 | Conservar datos al recargar | Registrar un producto y un movimiento; recargar la página | El producto, las cantidades y el movimiento continúan visibles | Pendiente de ejecución |
+| CP-05 | Conservar datos al recargar | PERSIST01, cantidad inicial 5; registrar entrada de 2; recargar la página | El producto queda con 7 unidades y el movimiento sigue visible | Aprobado el 30/10/2026 |
 | CP-06 | Buscar producto | Escribir parte del código o nombre en cada buscador | Solo aparecen las coincidencias y la tabla informa cuando no hay resultados | Pendiente de ejecución |
 | CP-07 | Filtrar por estado | Elegir “Stock bajo” o “Disponibles” en el inventario | La tabla muestra únicamente productos del estado seleccionado | Pendiente de ejecución |
 | CP-08 | Consultar fecha del movimiento | Registrar una entrada y una salida para TST001 | Ambas filas aparecen con tipo, cantidad, resultado y fecha/hora local | Aprobado |
@@ -35,4 +35,9 @@ El sistema identifica stock bajo cuando la cantidad disponible es menor o igual 
 
 Los datos se guardan en el almacenamiento local del navegador y no se sincronizan entre dispositivos.
 
-CP-05 continúa pendiente. Debe probarse en el navegador antes de marcarla aprobada.
+CP-05 fue aprobada el 30/10/2026 al recargar la página y comprobar que el producto y el movimiento persistieron.
+
+
+### CP-13 — Inventario sin productos (30/10/2026)
+
+Al abrir la aplicación sin productos registrados, la tabla mostró “No hay productos registrados.” y no presentó filas de productos. Resultado: aprobado.
