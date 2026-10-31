@@ -13,10 +13,10 @@ Fecha de revisión: 30 de octubre de 2026
 | CP-03 | Registrar salida válida | Producto P001, salida de 2 unidades | La cantidad baja de 5 a 3 y el movimiento queda registrado | Aprobado |
 | CP-04 | Rechazar salida mayor al stock | Producto P001, salida de 4 unidades cuando hay 3 disponibles | El sistema no descuenta unidades y muestra mensaje de error | Aprobado |
 | CP-05 | Conservar datos al recargar | PERSIST01, cantidad inicial 5; registrar entrada de 2; recargar la página | El producto queda con 7 unidades y el movimiento sigue visible | Aprobado el 30/10/2026 |
-| CP-06 | Buscar producto | Escribir parte del código o nombre en cada buscador | Solo aparecen las coincidencias y la tabla informa cuando no hay resultados | Pendiente de ejecución |
-| CP-07 | Filtrar por estado | Elegir “Stock bajo” o “Disponibles” en el inventario | La tabla muestra únicamente productos del estado seleccionado | Pendiente de ejecución |
+| CP-06 | Buscar producto | PEND01 y Papel de prueba; buscar código y nombre en productos e inventario; consulta NOEXISTE | Cada búsqueda muestra la coincidencia correspondiente y NOEXISTE informa que no hay resultados | Aprobado el 30/10/2026 |
+| CP-07 | Filtrar por estado | PEND01 (4 disponibles, mínimo 1) y PLOW01 (1 disponible, mínimo 1); filtrar por cada estado | “Disponibles” muestra solo PEND01 y “Stock bajo” muestra solo PLOW01 | Aprobado el 30/10/2026 |
 | CP-08 | Consultar fecha del movimiento | Registrar una entrada y una salida para TST001 | Ambas filas aparecen con tipo, cantidad, resultado y fecha/hora local | Aprobado |
-| CP-09 | Filtrar historial | Seleccionar “Solo entradas” o “Solo salidas” | El historial muestra únicamente el tipo elegido | Pendiente de ejecución |
+| CP-09 | Filtrar historial | PERSIST01; una entrada de 2 y una salida de 1; seleccionar cada filtro | “Solo entradas” muestra solo la entrada y “Solo salidas” solo la salida | Aprobado el 30/10/2026 |
 | CP-10 | Exportar inventario | Registrar productos y pulsar “Exportar inventario a CSV” | Se descarga un CSV con código, nombre, cantidades y estado | Pendiente de ejecución |
 | CP-11 | Exportar movimientos | Registrar una entrada o salida y pulsar “Exportar movimientos a CSV” | Se descarga un CSV con código, tipo, cantidad, resultado y fecha | Pendiente de ejecución |
 | CP-12 | Consultar existencias después de movimientos | TST001 con cantidad inicial 10; registrar entrada de 2 y salida de 1 | El inventario muestra 11 unidades disponibles y el producto en la tabla | Aprobado |
