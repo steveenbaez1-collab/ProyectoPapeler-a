@@ -5,10 +5,10 @@ Estas son las historias de usuario que definí para el sistema, teniendo en cuen
 | ID | Historia de usuario | Puntos | Estado | Responsable |
 | --- | --- | ---: | --- | --- |
 | HU-01 | Como encargado de inventario, quiero registrar productos con código, nombre, cantidad inicial y stock mínimo para mantener organizada la información de la papelería. | 3 | Terminada; CP-01 aprobada | Samuell Steveen Baez Diaz |
-| HU-02 | Como encargado de inventario, quiero consultar los productos y sus cantidades disponibles para conocer las existencias. | 2 | En validación; CP-12 y CP-13 aprobadas; DoD pendiente | Samuell Steveen Baez Diaz |
+| HU-02 | Como encargado de inventario, quiero consultar los productos y sus cantidades disponibles para conocer las existencias. | 2 | Terminada; CP-12 y CP-13 aprobadas; DoD verificada 30/10/2026 | Samuell Steveen Baez Diaz |
 | HU-03 | Como encargado de inventario, quiero registrar entradas de productos para actualizar las cantidades disponibles. | 3 | Terminada; CP-02 aprobada | Samuell Steveen Baez Diaz |
 | HU-04 | Como encargado de inventario, quiero registrar salidas y que el sistema rechace una cantidad mayor al stock para evitar inconsistencias. | 5 | Terminada; CP-03 y CP-04 aprobadas | Samuell Steveen Baez Diaz |
-| HU-05 | Como encargado de inventario, quiero consultar el historial de movimientos con fecha y hora para revisar los cambios realizados. | 3 | En validación; CP-08 aprobada; DoD pendiente | Samuell Steveen Baez Diaz |
+| HU-05 | Como encargado de inventario, quiero consultar el historial de movimientos con fecha y hora para revisar los cambios realizados. | 3 | Terminada; criterios de HU-05 y DoD verificados 30/10/2026 | Samuell Steveen Baez Diaz |
 | HU-09 | Como encargado de inventario, quiero que los productos y movimientos se conserven al recargar la página para no perder el registro en el navegador que estoy usando. | 3 | En validación; CP-05 aprobada; DoD pendiente | Samuell Steveen Baez Diaz |
 | HU-06 | Como encargado de inventario, quiero buscar productos por código o nombre para encontrarlos rápidamente. | 2 | En validación; CP-06 aprobada; DoD pendiente | Samuell Steveen Baez Diaz |
 | HU-07 | Como encargado de inventario, quiero filtrar los productos disponibles y los que tienen stock bajo para identificar cuáles requieren atención. | 2 | En validación; CP-07 aprobada; DoD pendiente | Samuell Steveen Baez Diaz |
@@ -19,8 +19,8 @@ Estas son las historias de usuario que definí para el sistema, teniendo en cuen
 ### Totales del backlog para el corte
 
 - Puntos comprometidos en el backlog completo del corte: **31**.
-- Puntos terminados con pruebas aprobadas: **11**.
-- Puntos en curso o pendientes de validación: **20**.
+- Puntos terminados con pruebas aprobadas: **16**.
+- Puntos en curso o pendientes de validación: **15**.
 
 Estos números corresponden a todas las historias del proyecto. No significan que pueda terminar los 31 puntos en un solo sprint.
 
@@ -58,7 +58,7 @@ Cuando confirme la planificación en clase, pondré las tarjetas **HU-02** y **H
 
 ## Nota sobre el estado real y el incremento
 
-Las dos funciones ya aparecen en el código, pero todavía me falta completar sus pruebas. Por eso, en este sprint me enfocaré en comprobarlas y corregir lo que encuentre. Si la profesora pide que el sprint incluya una función nueva, revisaré con ella qué historia se puede agregar sin salirme del alcance del proyecto.
+Las funciones de HU-02 y HU-05 ya estaban implementadas. En la revalidación del 30/10/2026 consulté el inventario, comprobé la cantidad después de una entrada y una salida, revisé el historial con fecha y hora local, recargué la página y comprobé los filtros. Los resultados y datos usados quedaron registrados en PRUEBAS.md; no aparecieron errores de JavaScript en la consola durante esa revisión. Las exportaciones CSV de HU-10 y HU-11 continúan pendientes y no forman parte del cierre de estas dos historias.
 
 ## Alcance
 
