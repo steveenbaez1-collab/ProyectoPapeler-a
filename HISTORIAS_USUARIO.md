@@ -5,14 +5,14 @@ Estas son las historias de usuario que definí para el sistema, teniendo en cuen
 | ID | Historia de usuario | Puntos | Estado | Responsable |
 | --- | --- | ---: | --- | --- |
 | HU-01 | Como encargado de inventario, quiero registrar productos con código, nombre, cantidad inicial y stock mínimo para mantener organizada la información de la papelería. | 3 | Terminada; CP-01 aprobada | Samuell Steveen Baez Diaz |
-| HU-02 | Como encargado de inventario, quiero consultar los productos y sus cantidades disponibles para conocer las existencias. | 2 | En validación; falta un caso de prueba específico de consulta de inventario | Samuell Steveen Baez Diaz |
+| HU-02 | Como encargado de inventario, quiero consultar los productos y sus cantidades disponibles para conocer las existencias. | 2 | En validación; CP-12 y CP-13 aprobadas; DoD pendiente | Samuell Steveen Baez Diaz |
 | HU-03 | Como encargado de inventario, quiero registrar entradas de productos para actualizar las cantidades disponibles. | 3 | Terminada; CP-02 aprobada | Samuell Steveen Baez Diaz |
 | HU-04 | Como encargado de inventario, quiero registrar salidas y que el sistema rechace una cantidad mayor al stock para evitar inconsistencias. | 5 | Terminada; CP-03 y CP-04 aprobadas | Samuell Steveen Baez Diaz |
-| HU-05 | Como encargado de inventario, quiero consultar el historial de movimientos con fecha y hora para revisar los cambios realizados. | 3 | En validación; CP-08 pendiente | Samuell Steveen Baez Diaz |
-| HU-09 | Como encargado de inventario, quiero que los productos y movimientos se conserven al recargar la página para no perder el registro en el navegador que estoy usando. | 3 | En validación; CP-05 pendiente | Samuell Steveen Baez Diaz |
-| HU-06 | Como encargado de inventario, quiero buscar productos por código o nombre para encontrarlos rápidamente. | 2 | En validación; CP-06 pendiente | Samuell Steveen Baez Diaz |
-| HU-07 | Como encargado de inventario, quiero filtrar los productos disponibles y los que tienen stock bajo para identificar cuáles requieren atención. | 2 | En validación; CP-07 pendiente | Samuell Steveen Baez Diaz |
-| HU-08 | Como encargado de inventario, quiero filtrar el historial por entradas o salidas para consultar el tipo de movimiento que necesito. | 2 | En validación; CP-09 pendiente | Samuell Steveen Baez Diaz |
+| HU-05 | Como encargado de inventario, quiero consultar el historial de movimientos con fecha y hora para revisar los cambios realizados. | 3 | En validación; CP-08 aprobada; DoD pendiente | Samuell Steveen Baez Diaz |
+| HU-09 | Como encargado de inventario, quiero que los productos y movimientos se conserven al recargar la página para no perder el registro en el navegador que estoy usando. | 3 | En validación; CP-05 aprobada; DoD pendiente | Samuell Steveen Baez Diaz |
+| HU-06 | Como encargado de inventario, quiero buscar productos por código o nombre para encontrarlos rápidamente. | 2 | En validación; CP-06 aprobada; DoD pendiente | Samuell Steveen Baez Diaz |
+| HU-07 | Como encargado de inventario, quiero filtrar los productos disponibles y los que tienen stock bajo para identificar cuáles requieren atención. | 2 | En validación; CP-07 aprobada; DoD pendiente | Samuell Steveen Baez Diaz |
+| HU-08 | Como encargado de inventario, quiero filtrar el historial por entradas o salidas para consultar el tipo de movimiento que necesito. | 2 | En validación; CP-09 aprobada; DoD pendiente | Samuell Steveen Baez Diaz |
 | HU-10 | Como encargado de inventario, quiero exportar el inventario a CSV para revisar sus datos fuera del sistema. | 3 | En validación; CP-10 pendiente | Samuell Steveen Baez Diaz |
 | HU-11 | Como encargado de inventario, quiero exportar el historial de movimientos a CSV para revisar sus registros fuera del sistema. | 3 | En validación; CP-11 pendiente | Samuell Steveen Baez Diaz |
 
