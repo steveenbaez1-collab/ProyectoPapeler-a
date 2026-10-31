@@ -41,3 +41,12 @@ CP-05 fue aprobada el 30/10/2026 al recargar la página y comprobar que el produ
 ### CP-13 — Inventario sin productos (30/10/2026)
 
 Al abrir la aplicación sin productos registrados, la tabla mostró “No hay productos registrados.” y no presentó filas de productos. Resultado: aprobado.
+
+
+## Revalidación de HU-02 y HU-05 — 30/10/2026
+
+Se trabajó con el producto de prueba PEND01 (Papel de prueba), que tenía 4 unidades disponibles y mínimo de 1. En el historial registré una entrada de 1 unidad a las 8:48:41 p. m. y una salida válida de 1 unidad a las 8:48:47 p. m.; ambas quedaron con resultado «Registrada» y fecha/hora local. Después, el inventario volvió a mostrar 4 unidades (4 + 1 - 1), el mínimo 1 y estado «Disponible».
+
+En el filtro del historial, «Solo entradas» mostró únicamente la entrada y «Solo salidas» únicamente la salida. Al recargar, el producto y los dos movimientos siguieron visibles. Durante la recarga y la consulta no aparecieron errores de JavaScript en la consola.
+
+Resultado: criterios observados de consulta de existencias e historial con fecha/hora aprobados en esta revalidación. El producto PEND01 y los dos movimientos son datos de prueba y quedan en el navegador local.
