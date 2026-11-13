@@ -13,8 +13,8 @@ Estas son las historias de usuario que definí para el sistema, teniendo en cuen
 | HU-06 | Como encargado de inventario, quiero buscar productos por código o nombre para encontrarlos rápidamente. | 2 | En validación; CP-06 aprobada; DoD pendiente | Samuell Steveen Baez Diaz |
 | HU-07 | Como encargado de inventario, quiero filtrar los productos disponibles y los que tienen stock bajo para identificar cuáles requieren atención. | 2 | En validación; CP-07 aprobada; DoD pendiente | Samuell Steveen Baez Diaz |
 | HU-08 | Como encargado de inventario, quiero filtrar el historial por entradas o salidas para consultar el tipo de movimiento que necesito. | 2 | En validación; CP-09 aprobada; DoD pendiente | Samuell Steveen Baez Diaz |
-| HU-10 | Como encargado de inventario, quiero exportar el inventario a CSV para revisar sus datos fuera del sistema. | 3 | En validación; CP-10 pendiente | Samuell Steveen Baez Diaz |
-| HU-11 | Como encargado de inventario, quiero exportar el historial de movimientos a CSV para revisar sus registros fuera del sistema. | 3 | En validación; CP-11 pendiente | Samuell Steveen Baez Diaz |
+| HU-10 | Como encargado de inventario, quiero exportar el inventario a CSV para revisar sus datos fuera del sistema. | 3 | En validación; CP-10 aprobada el 30/10/2026; falta verificar la DoD | Samuell Steveen Baez Diaz |
+| HU-11 | Como encargado de inventario, quiero exportar el historial de movimientos a CSV para revisar sus registros fuera del sistema. | 3 | En validación; CP-11 aprobada el 30/10/2026; falta verificar la DoD | Samuell Steveen Baez Diaz |
 
 ### Totales del backlog para el corte
 
@@ -24,11 +24,11 @@ Estas son las historias de usuario que definí para el sistema, teniendo en cuen
 
 Estos números corresponden a todas las historias del proyecto. No significan que pueda terminar los 31 puntos en un solo sprint.
 
-## Planificación propuesta — Sprint 1 (primera clase de semana 12)
+## Planificación y resultado — Sprint 1 (semana 12)
 
-Como estoy trabajando solo con autorización de la profesora, preparé esta propuesta para revisarla en la primera clase de la semana 12. Todavía debo confirmar que el trabajo seleccionado se ajuste al tiempo que tengo.
+Como estoy trabajando solo con autorización de la profesora, el sprint se planificó de forma individual. Las historias comprometidas fueron HU-02 y HU-05, por un total de 5 puntos; ambas se cerraron en la sesión de construcción y su evidencia quedó en el repositorio y en el historial del tablero.
 
-**Objetivo propuesto:** En este sprint quiero comprobar que se puedan consultar las existencias y revisar el historial de movimientos con su fecha y hora.
+**Objetivo del sprint:** Como encargado de inventario, podré consultar las existencias y revisar el historial de movimientos con su fecha y hora.
 
 | ID | Historia seleccionada | Puntos |
 | --- | --- | ---: |
@@ -36,7 +36,7 @@ Como estoy trabajando solo con autorización de la profesora, preparé esta prop
 | HU-05 | Consultar el historial de movimientos con fecha y hora | 3 |
 | **Total propuesto** |  | **5** |
 
-Escogí estas dos historias porque todavía tengo pendientes sus pruebas. En clase revisaré si alcanzo a trabajar los 5 puntos durante el sprint. Si el tiempo no me alcanza, ajustaré la selección y el objetivo con lo que se acuerde; no quiero escoger historias solo para completar un número de puntos.
+Seleccioné estas historias para completar la consulta del inventario y la revisión de movimientos que aún necesitaban validación. El resultado registrado fue de 5 puntos terminados de los 5 comprometidos en este sprint; esto no significa que todo el backlog del proyecto esté terminado.
 
 ### Criterios de aceptación de las historias seleccionadas
 
@@ -52,13 +52,13 @@ Escogí estas dos historias porque todavía tengo pendientes sus pruebas. En cla
 2. Al registrar una salida válida, aparece una fila con el código, tipo «Salida», cantidad, resultado y fecha/hora.
 3. La fecha/hora se presenta en formato local legible para Colombia y corresponde al momento del registro.
 
-### Tarjetas para el tablero
+### Registro de las tarjetas en el tablero
 
-Cuando confirme la planificación en clase, pondré las tarjetas **HU-02** y **HU-05** en la columna **Por hacer** del tablero y conservaré los puntos asignados. Antes de empezar cada historia revisaré que esté lista según la Definition of Ready. La moveré a **Terminado** cuando cumpla la Definition of Done de `ESTANDARES.md`.
+Las tarjetas **HU-02** y **HU-05** quedaron asociadas al tablero y se movieron de **Por hacer** a **Terminado** el 30/10/2026. Las horas y la referencia a cada historia están en `BITACORA_SESION_SEMANA12.html`; el cierre y las pruebas se pueden contrastar con los issues #8 y #9 y con `PRUEBAS.md`.
 
 ## Nota sobre el estado real y el incremento
 
-Las funciones de HU-02 y HU-05 ya estaban implementadas. En la revalidación del 30/10/2026 consulté el inventario, comprobé la cantidad después de una entrada y una salida, revisé el historial con fecha y hora local, recargué la página y comprobé los filtros. Los resultados y datos usados quedaron registrados en PRUEBAS.md; no aparecieron errores de JavaScript en la consola durante esa revisión. Las exportaciones CSV de HU-10 y HU-11 continúan pendientes y no forman parte del cierre de estas dos historias.
+Las funciones de HU-02 y HU-05 ya estaban implementadas. En la revalidación del 30/10/2026 consulté el inventario, comprobé la cantidad después de una entrada y una salida, revisé el historial con fecha y hora local, recargué la página y comprobé los filtros. Los resultados y datos usados quedaron registrados en PRUEBAS.md; no aparecieron errores de JavaScript en la consola durante esa revisión. En esa misma fecha también se comprobó el contenido CSV de HU-10 y HU-11 (CP-10 y CP-11 aprobadas); sus historias siguen en validación porque todavía falta revisar todas las condiciones de la Definition of Done.
 
 ## Alcance
 
