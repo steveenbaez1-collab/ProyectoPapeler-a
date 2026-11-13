@@ -53,3 +53,23 @@ Probé ambas opciones con PEND01. La aplicación mostró un mensaje de confirmac
 - CP-11 — Movimientos: encabezados Código, Tipo, Cantidad, Resultado y Fecha y hora. Incluyó la entrada de 1 a las 8:48:41 p. m. y la salida de 1 a las 8:48:47 p. m., ambas del 30/10/2026.
 
 Comprobé el contenido generado y el mensaje de confirmación de ambas exportaciones. PEND01 son datos de prueba locales.
+
+## Revalidación manual en navegador — 12 de noviembre de 2026
+
+Volví a ejecutar los flujos con datos temporales en el navegador. Antes de comenzar, la tabla no tenía productos registrados. Usé TST1211 (5 unidades, mínimo 1) y LOW1211 (1 unidad, mínimo 1); al terminar retiré esos datos de prueba y confirmé que el inventario volvió a quedar vacío.
+
+| Casos | Resultado observado |
+| --- | --- |
+| CP-01 | Se registraron ambos productos; TST1211 quedó como Disponible y LOW1211 como Stock bajo. |
+| CP-02 y CP-03 | Una entrada de 2 elevó TST1211 de 5 a 7; una salida válida de 1 lo dejó en 6. |
+| CP-04 | Una salida de 99 fue rechazada, se mostró el mensaje y las existencias permanecieron en 6. El intento rechazado quedó en el historial. |
+| CP-05 | Después de recargar, se conservaron los dos productos y los tres movimientos de la prueba. |
+| CP-06 | La búsqueda encontró por código y nombre, y para NOEXISTE1211 mostró que no había resultados. |
+| CP-07 | El filtro Disponibles mostró TST1211; Stock bajo mostró LOW1211. |
+| CP-08 | El historial presentó tipo, cantidad, resultado y fecha/hora local para los movimientos. |
+| CP-09 | Solo entradas mostró la entrada; Solo salidas mostró las dos salidas. |
+| CP-10 y CP-11 | Los botones generaron el contenido CSV esperado, con encabezados y filas correctos; la descarga efectiva del archivo en disco no se pudo confirmar desde esta sesión, así que queda pendiente comprobarla manualmente. |
+| CP-12 | La consulta mostró 6 unidades tras la entrada y salida (5 + 2 - 1); el intento rechazado de 99 no cambió ese valor. |
+| CP-13 | Antes de iniciar la prueba, el inventario vacío mostró el mensaje correspondiente y ninguna fila de producto. |
+
+En la comprobación final de recarga y consulta no se observaron errores de JavaScript en la consola. Los datos temporales fueron retirados; no son datos de operación real ni respuestas de un cliente.

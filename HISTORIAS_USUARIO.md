@@ -13,8 +13,8 @@ Estas son las historias de usuario que definí para el sistema, teniendo en cuen
 | HU-06 | Como encargado de inventario, quiero buscar productos por código o nombre para encontrarlos rápidamente. | 2 | En validación; CP-06 aprobada; DoD pendiente | Samuell Steveen Baez Diaz |
 | HU-07 | Como encargado de inventario, quiero filtrar los productos disponibles y los que tienen stock bajo para identificar cuáles requieren atención. | 2 | En validación; CP-07 aprobada; DoD pendiente | Samuell Steveen Baez Diaz |
 | HU-08 | Como encargado de inventario, quiero filtrar el historial por entradas o salidas para consultar el tipo de movimiento que necesito. | 2 | En validación; CP-09 aprobada; DoD pendiente | Samuell Steveen Baez Diaz |
-| HU-10 | Como encargado de inventario, quiero exportar el inventario a CSV para revisar sus datos fuera del sistema. | 3 | En validación; CP-10 aprobada el 30/10/2026; falta verificar la DoD | Samuell Steveen Baez Diaz |
-| HU-11 | Como encargado de inventario, quiero exportar el historial de movimientos a CSV para revisar sus registros fuera del sistema. | 3 | En validación; CP-11 aprobada el 30/10/2026; falta verificar la DoD | Samuell Steveen Baez Diaz |
+| HU-10 | Como encargado de inventario, quiero exportar el inventario a CSV para revisar sus datos fuera del sistema. | 3 | En validación; contenido CSV revisado el 12/11/2026; falta confirmar descarga del archivo y verificar la DoD | Samuell Steveen Baez Diaz |
+| HU-11 | Como encargado de inventario, quiero exportar el historial de movimientos a CSV para revisar sus registros fuera del sistema. | 3 | En validación; contenido CSV revisado el 12/11/2026; falta confirmar descarga del archivo y verificar la DoD | Samuell Steveen Baez Diaz |
 
 ### Totales del backlog para el corte
 
@@ -34,7 +34,7 @@ Como estoy trabajando solo con autorización de la profesora, el sprint se plani
 | --- | --- | ---: |
 | HU-02 | Consultar los productos y sus cantidades disponibles | 2 |
 | HU-05 | Consultar el historial de movimientos con fecha y hora | 3 |
-| **Total propuesto** |  | **5** |
+| **Total comprometido** |  | **5** |
 
 Seleccioné estas historias para completar la consulta del inventario y la revisión de movimientos que aún necesitaban validación. El resultado registrado fue de 5 puntos terminados de los 5 comprometidos en este sprint; esto no significa que todo el backlog del proyecto esté terminado.
 
@@ -58,7 +58,7 @@ Las tarjetas **HU-02** y **HU-05** quedaron asociadas al tablero y se movieron d
 
 ## Nota sobre el estado real y el incremento
 
-Las funciones de HU-02 y HU-05 ya estaban implementadas. En la revalidación del 30/10/2026 consulté el inventario, comprobé la cantidad después de una entrada y una salida, revisé el historial con fecha y hora local, recargué la página y comprobé los filtros. Los resultados y datos usados quedaron registrados en PRUEBAS.md; no aparecieron errores de JavaScript en la consola durante esa revisión. En esa misma fecha también se comprobó el contenido CSV de HU-10 y HU-11 (CP-10 y CP-11 aprobadas); sus historias siguen en validación porque todavía falta revisar todas las condiciones de la Definition of Done.
+Las funciones de HU-02 y HU-05 ya estaban implementadas. En la revalidación del 30/10/2026 consulté el inventario, comprobé la cantidad después de una entrada y una salida, revisé el historial con fecha y hora local, recargué la página y comprobé los filtros. Los resultados y datos usados quedaron registrados en PRUEBAS.md. En la revisión del 12/11/2026 volví a ejecutar esos flujos y los de búsqueda, filtros y persistencia. También revisé el contenido CSV generado para HU-10 y HU-11; la descarga del archivo en disco sigue por confirmar, por eso esas historias permanecen en validación junto con la revisión completa de su Definition of Done.
 
 ## Alcance
 

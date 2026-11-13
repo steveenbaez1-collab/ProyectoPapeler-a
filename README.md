@@ -29,6 +29,14 @@ Proyecto web sencillo para controlar productos, cantidades disponibles, entradas
 2. Abrir el archivo `index.html` en el navegador.
 3. Registrar productos y probar entradas o salidas desde la interfaz.
 
+## Documentación del proyecto
+
+- [Historias de usuario y planificación del sprint](./HISTORIAS_USUARIO.md)
+- [Estándares de trabajo](./ESTANDARES.md)
+- [Casos y resultados de pruebas](./PRUEBAS.md)
+- [Instrumento de satisfacción listo para aplicar](./INSTRUMENTO_SATISFACCION.md) — todavía no tiene respuestas recopiladas.
+- [Borrador de preguntas sesgadas para la exposición de Samuel](./BORRADOR_INSTRUMENTO_SATISFACCION.md)
+
 ## Regla de negocio principal
 
 No se puede registrar una salida de producto si la cantidad solicitada es mayor que la cantidad disponible en inventario.
