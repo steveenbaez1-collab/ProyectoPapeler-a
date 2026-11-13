@@ -17,8 +17,8 @@ Fecha de revisión: 30 de octubre de 2026
 | CP-07 | Filtrar por estado | PEND01 (4 disponibles, mínimo 1) y PLOW01 (1, mínimo 1) | “Disponibles” muestra PEND01 y “Stock bajo” muestra PLOW01 | Aprobado el 30/10/2026 |
 | CP-08 | Consultar fecha del movimiento | Registrar entrada y salida para TST001 | Ambas filas muestran tipo, cantidad, resultado y fecha/hora local | Aprobado |
 | CP-09 | Filtrar historial | PERSIST01; entrada de 2 y salida de 1 | “Solo entradas” y “Solo salidas” muestran el movimiento correspondiente | Aprobado el 30/10/2026 |
-| CP-10 | Exportar inventario | PEND01; pulsar Exportar inventario a CSV | CSV con código, nombre, cantidades y estado | Aprobado el 30/10/2026 |
-| CP-11 | Exportar movimientos | Movimientos PEND01; pulsar Exportar movimientos a CSV | CSV con código, tipo, cantidad, resultado y fecha/hora | Aprobado el 30/10/2026 |
+| CP-10 | Exportar inventario | PEND01; pulsar Exportar inventario a CSV | CSV con código, nombre, cantidades y estado | Parcial: contenido comprobado; descarga en disco pendiente |
+| CP-11 | Exportar movimientos | Movimientos PEND01; pulsar Exportar movimientos a CSV | CSV con código, tipo, cantidad, resultado y fecha/hora | Parcial: contenido comprobado; descarga en disco pendiente |
 | CP-12 | Consultar existencias después de movimientos | TST001 con 10; entrada de 2 y salida de 1 | Inventario muestra 11 unidades disponibles | Aprobado |
 
 ## Detalle de revisión del 30 de octubre
@@ -52,7 +52,7 @@ Probé ambas opciones con PEND01. La aplicación mostró un mensaje de confirmac
 - CP-10 — Inventario: encabezados Código, Producto, Cantidad disponible, Stock mínimo y Estado. La fila mostró PEND01, Papel de prueba, 4 unidades, mínimo 1 y Disponible.
 - CP-11 — Movimientos: encabezados Código, Tipo, Cantidad, Resultado y Fecha y hora. Incluyó la entrada de 1 a las 8:48:41 p. m. y la salida de 1 a las 8:48:47 p. m., ambas del 30/10/2026.
 
-Comprobé el contenido generado y el mensaje de confirmación de ambas exportaciones. PEND01 son datos de prueba locales.
+Comprobé el contenido generado y el mensaje de confirmación de ambas exportaciones. No quedó evidencia de que los archivos se descargaran en disco; por eso CP-10 y CP-11 no se consideran cerradas todavía. PEND01 son datos de prueba locales.
 
 ## Revalidación manual en navegador — 12 de noviembre de 2026
 
