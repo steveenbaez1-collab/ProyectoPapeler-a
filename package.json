@@ -4,8 +4,8 @@
   "description": "Herramientas de análisis estático del Sistema de Control de Inventario para Papelería. La aplicación no necesita Node.js: se abre desde index.html.",
   "scripts": {
     "analisis": "npm run analisis:js && npm run analisis:html",
-    "analisis:js": "eslint js/app.js",
-    "analisis:html": "html-validate index.html"
+    "analisis:js": "eslint js/app.js js/encuesta.js",
+    "analisis:html": "html-validate index.html encuesta.html"
   },
   "devDependencies": {
     "@eslint/js": "9.17.0",

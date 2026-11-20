@@ -35,6 +35,7 @@ Proyecto web sencillo para controlar productos, cantidades disponibles, entradas
 - [Estándares de trabajo](./ESTANDARES.md)
 - [Casos y resultados de pruebas](./PRUEBAS.md)
 - [Instrumento de satisfacción listo para aplicar](./INSTRUMENTO_SATISFACCION.md) — todavía no tiene respuestas recopiladas.
+- [Encuesta en línea](./encuesta.html): envía cada respuesta por WhatsApp. Configuración en [APLICAR_ENCUESTA.md](./docs/entrega-final/APLICAR_ENCUESTA.md).
 - [Entrega final (borrador con las 13 secciones)](./docs/entrega-final/ENTREGA_FINAL.md)
 - [Plan de calidad y registro de defectos](./docs/entrega-final/PLAN_CALIDAD.md)
 - [Propuesta del sprint 2](./docs/entrega-final/SPRINT_2.md)

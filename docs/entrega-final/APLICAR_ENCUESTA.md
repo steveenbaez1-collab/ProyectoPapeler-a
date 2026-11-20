@@ -12,7 +12,19 @@ Son tres pasos y toman unos 15 minutos. Las preguntas son las mismas de `INSTRUM
 
 Los datos que registre cada persona se guardan solo en su propio navegador. Nadie ve los datos de otro ni los suyos.
 
-## Paso 2. Crear el formulario en Google Forms (10 minutos)
+## Paso 2. Elegir el formulario
+
+### Opción A: la encuesta del propio proyecto (recomendada, 1 minuto)
+
+El repositorio trae `encuesta.html`, con las mismas preguntas del instrumento. Cada persona responde y su respuesta le llega a usted como mensaje de WhatsApp. No usa cuentas ni servidores, y no guarda nada en el navegador.
+
+1. Abra `js/encuesta.js` y escriba su número en `NUMERO_WHATSAPP`: código de país más número, solo dígitos. Ejemplo para Colombia: `"573001234567"`. Haga commit.
+2. Una vez publicado el sistema (paso 1), la encuesta queda en **https://steveenbaez1-collab.github.io/ProyectoPapeler-a/encuesta.html**
+3. Cada respuesta llega a su WhatsApp con la fecha. Guarde capturas de los mensajes como anexo E y pase las respuestas a la tabla «Registro de aplicación».
+
+Si deja el número vacío, la encuesta avisa que todavía no está configurada y no envía nada.
+
+### Opción B: Google Forms (10 minutos)
 
 Entre a forms.google.com, cree un formulario en blanco y copie esto tal cual.
 
@@ -42,13 +54,13 @@ Envíelo por WhatsApp al dueño y a los empleados de la papelería:
 >
 > 1. Abre el sistema: https://steveenbaez1-collab.github.io/ProyectoPapeler-a/
 > 2. Registra un producto, haz una entrada y una salida, y prueba a sacar más unidades de las que hay.
-> 3. Responde aquí, es anónimo: [ENLACE DEL FORMULARIO]
+> 3. Responde aquí, es anónimo: https://steveenbaez1-collab.github.io/ProyectoPapeler-a/encuesta.html (o el enlace de Google Forms)
 >
 > ¡Muchas gracias!
 
 ## Paso 4. Guardar las respuestas como evidencia
 
-1. En Google Forms, en la pestaña **Respuestas**, descargue la hoja de cálculo (icono de Sheets → Descargar → CSV) y tome una captura del resumen. Ese es el anexo E.
+1. Con la opción A, guarde capturas de los mensajes de WhatsApp. Con la opción B, en Google Forms, en la pestaña **Respuestas**, descargue la hoja de cálculo (icono de Sheets → Descargar → CSV) y tome una captura del resumen. Ese es el anexo E.
 2. Llene la tabla «Registro de aplicación» de `INSTRUMENTO_SATISFACCION.md` con la fecha real, los perfiles y el número de respuestas válidas.
 3. **CSAT** = respuestas «Satisfecho(a)» o «Muy satisfecho(a)» en la pregunta 4 ÷ respuestas válidas a la pregunta 4 (sin contar «No lo probé») × 100.
 4. Si alguien responde «La aceptó» en la pregunta 3, repita CP-04 y corrija el sistema antes de dar la regla por buena.

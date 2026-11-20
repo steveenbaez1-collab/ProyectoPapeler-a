@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Encuesta de satisfacción · Inventario</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/encuesta.css">
+</head>
+
+<body>
+
+<header class="encabezado">
+    <div class="contenedor">
+        <h1>Encuesta de satisfacción</h1>
+        <p>Sistema de Control de Inventario para Papelería</p>
+    </div>
+</header>
+
+<main class="contenedor encuesta">
+
+    <section class="tarjeta">
+        <p>
+            Esta encuesta busca conocer cómo fue usar el sistema de inventario e identificar qué conviene mejorar.
+            Respóndala después de probar la consulta del inventario y el registro de entradas y salidas.
+        </p>
+        <p>
+            Participar es voluntario y no se pide nombre ni información personal. Marque una opción por pregunta.
+            Si no alcanzó a probar una función, elija «No lo probé». No hay respuestas correctas o incorrectas.
+        </p>
+        <p>
+            <a href="index.html" target="_blank" rel="noopener">Abrir el sistema para probarlo</a>
+        </p>
+    </section>
+
+    <form id="formularioEncuesta" class="tarjeta" novalidate>
+
+        <fieldset class="pregunta">
+            <legend>Perfil de uso</legend>
+            <label><input type="radio" name="perfil" value="Propietario(a)" required> Propietario(a)</label>
+            <label><input type="radio" name="perfil" value="Empleado(a) que registra o consulta inventario"> Empleado(a) que registra o consulta inventario</label>
+            <label><input type="radio" name="perfil" value="Otro usuario autorizado"> Otro usuario autorizado</label>
+            <input type="text" id="perfilOtro" class="campo-otro" placeholder="¿Cuál?" aria-label="Otro perfil">
+        </fieldset>
+
+        <fieldset class="pregunta">
+            <legend>1. ¿Qué tan fácil fue encontrar la cantidad disponible de un producto?</legend>
+            <label><input type="radio" name="p1" value="Muy difícil" required> Muy difícil</label>
+            <label><input type="radio" name="p1" value="Difícil"> Difícil</label>
+            <label><input type="radio" name="p1" value="Ni fácil ni difícil"> Ni fácil ni difícil</label>
+            <label><input type="radio" name="p1" value="Fácil"> Fácil</label>
+            <label><input type="radio" name="p1" value="Muy fácil"> Muy fácil</label>
+            <label><input type="radio" name="p1" value="No lo probé"> No lo probé</label>
+        </fieldset>
+
+        <fieldset class="pregunta">
+            <legend>2. ¿Qué tan claro fue el resultado después de registrar una entrada de producto?</legend>
+            <label><input type="radio" name="p2" value="Nada claro" required> Nada claro</label>
+            <label><input type="radio" name="p2" value="Poco claro"> Poco claro</label>
+            <label><input type="radio" name="p2" value="Medianamente claro"> Medianamente claro</label>
+            <label><input type="radio" name="p2" value="Claro"> Claro</label>
+            <label><input type="radio" name="p2" value="Muy claro"> Muy claro</label>
+            <label><input type="radio" name="p2" value="No lo probé"> No lo probé</label>
+        </fieldset>
+
+        <fieldset class="pregunta">
+            <legend>3. Al intentar registrar una salida mayor que las existencias, ¿qué ocurrió?</legend>
+            <label><input type="radio" name="p3" value="El sistema la rechazó y mostró un mensaje" required> El sistema la rechazó y mostró un mensaje</label>
+            <label><input type="radio" name="p3" value="La aceptó"> La aceptó</label>
+            <label><input type="radio" name="p3" value="Ocurrió algo distinto"> Ocurrió algo distinto</label>
+            <input type="text" id="p3Otro" class="campo-otro" placeholder="¿Qué ocurrió?" aria-label="Qué ocurrió">
+            <label><input type="radio" name="p3" value="No lo probé"> No lo probé</label>
+        </fieldset>
+
+        <fieldset class="pregunta">
+            <legend>4. En general, ¿qué tan satisfecho(a) quedó con el sistema para llevar el control básico del inventario?</legend>
+            <label><input type="radio" name="p4" value="Muy insatisfecho(a)" required> Muy insatisfecho(a)</label>
+            <label><input type="radio" name="p4" value="Insatisfecho(a)"> Insatisfecho(a)</label>
+            <label><input type="radio" name="p4" value="Ni satisfecho(a) ni insatisfecho(a)"> Ni satisfecho(a) ni insatisfecho(a)</label>
+            <label><input type="radio" name="p4" value="Satisfecho(a)"> Satisfecho(a)</label>
+            <label><input type="radio" name="p4" value="Muy satisfecho(a)"> Muy satisfecho(a)</label>
+            <label><input type="radio" name="p4" value="No lo probé"> No lo probé</label>
+        </fieldset>
+
+        <div class="pregunta">
+            <label for="comentario" class="titulo-pregunta">
+                Comentario opcional: ¿qué cambio concreto le ayudaría más al usar el sistema?
+            </label>
+            <textarea id="comentario" rows="4" maxlength="600"></textarea>
+        </div>
+
+        <button type="submit" class="boton-principal">Enviar respuestas</button>
+
+        <div id="mensajeEncuesta" class="mensaje" aria-live="polite"></div>
+    </form>
+
+</main>
+
+<script src="js/encuesta.js"></script>
+</body>
+</html>
