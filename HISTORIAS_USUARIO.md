@@ -54,7 +54,7 @@ Seleccioné estas historias para completar la consulta del inventario y la revis
 
 ### Registro de las tarjetas en el tablero
 
-Las tarjetas **HU-02** y **HU-05** quedaron asociadas al tablero y se movieron de **Por hacer** a **Terminado** el 30/10/2026. Las horas y la referencia a cada historia están en `BITACORA_SESION_SEMANA12.html`; el cierre y las pruebas se pueden contrastar con los issues #8 y #9 y con `PRUEBAS.md`.
+Las tarjetas **HU-02** y **HU-05** quedaron asociadas al tablero y se movieron de **Por hacer** a **Terminado** el 30/10/2026. Las horas y la referencia a cada historia se registraron en `BITACORA_SESION_SEMANA12.html`, que todavía no está en el repositorio (pendiente de subir, DEF-05); el cierre y las pruebas se pueden contrastar con los issues #8 y #9 y con `PRUEBAS.md`.
 
 ## Nota sobre el estado real y el incremento
 
