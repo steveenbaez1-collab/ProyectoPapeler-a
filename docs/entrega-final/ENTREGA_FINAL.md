@@ -1,12 +1,12 @@
 # Entrega final: Sistema de Control de Inventario para Papelería
 
-> **Borrador preparado con un asistente de IA el 20/11/2026.** Cada dato que aparece aquí sale del repositorio o de GitHub, y se indica de dónde viene. Lo marcado **[COMPLETAR]** solo lo puede llenar usted: decisiones, horas, riesgos, respuestas de la encuesta, retrospectivas y lecciones. No entregue este documento sin revisarlo completo y sin llenar las marcas. Antes de entregar, borre este recuadro.
+> **Borrador preparado con un asistente de IA el 20/11/2026.** Cada dato sale del repositorio, de GitHub, del acta de constitución o de la hoja de respuestas de la encuesta, y se indica de dónde viene. Lo marcado **[PROPUESTA]** lo redactó el asistente a partir de esas evidencias, a pedido del autor: confírmelo o corríjalo. Lo marcado **[COMPLETAR]** depende de algo que todavía no ha ocurrido (el sprint 2, la respuesta del propietario) o que solo conoce el autor (horas reales). Antes de entregar, revise todo y borre este recuadro.
 
 ---
 
 ## 1. Portada e identificación
 
-- **Espacio académico:** [COMPLETAR] · **Universidad:** [COMPLETAR] · **Semana:** [COMPLETAR]
+- **Espacio académico:** Gerencia de Software (ISS6C) · **Universidad:** Universidad Santo Tomás, Villavicencio · **Fecha:** noviembre de 2026
 - **Integrante:** Samuell Steveen Baez Diaz. Proyecto individual con autorización de la docente (`ESTANDARES.md`, sección 1).
 
 | Integrante | Sprint 1 | Sprint 2 |
@@ -15,17 +15,31 @@
 
 **Rotación de roles:** no aplica, porque el equipo es de una persona. La revisión de cada cambio se hace con la política de auto-revisión de `ESTANDARES.md`, sección 6.
 
-**Enlaces:** repositorio [COMPLETAR] · tablero [COMPLETAR] · formulario de satisfacción [COMPLETAR]. Verifíquelos en una ventana de incógnito el día antes de radicar.
+**Enlaces:** repositorio https://github.com/steveenbaez1-collab/ProyectoPapeler-a · sistema publicado https://steveenbaez1-collab.github.io/ProyectoPapeler-a/ (activo cuando se habilite GitHub Pages) · tablero [COMPLETAR] · formulario de satisfacción [COMPLETAR: enlace corto del registro de ejecución del script]. Verifíquelos en una ventana de incógnito el día antes de radicar.
 
 ## 2. Resumen ejecutivo
 
-[COMPLETAR. Una página como máximo. Puede partir de estos hechos:]
+Construí un sistema web para controlar el inventario de una papelería pequeña. Antes, el inventario se llevaba a mano, con pérdidas, errores en las cantidades y sin saber a tiempo qué reponer. El propósito es que las papelerías pequeñas ahorren tiempo en la organización de su inventario. Los usuarios son el propietario, que consulta las existencias, y los empleados que registran las entradas y las salidas.
 
-- **Qué se construyó:** un sistema web en HTML, CSS y JavaScript para registrar productos, entradas y salidas, consultar existencias, buscar y filtrar, conservar los datos en el navegador y exportar a CSV. Regla principal: no se acepta una salida mayor que el stock.
-- **Propósito:** ayudar a papelerías pequeñas con su inventario, para que ahorren tiempo en la organización (palabras del autor).
-- **Para quién:** el propietario de la papelería, que es el interlocutor principal, y los empleados encargados del inventario (acta, sección 6).
-- **Cómo:** Scrum adaptado a un integrante, con un backlog de 11 historias y 31 puntos.
-- **Resultado:** [COMPLETAR al cierre: puntos terminados de 31 y estado de los ACQ]. Encuesta del 20/11/2026: 4 respuestas, todas de empleados; CSAT de 67 % (2 de 3 respuestas válidas).
+El sistema, hecho en HTML, CSS y JavaScript sin instalación, permite:
+
+- registrar productos con su stock mínimo;
+- registrar entradas y salidas;
+- consultar las existencias con su estado;
+- buscar y filtrar productos y movimientos;
+- revisar el historial con fecha y hora;
+- conservar los datos al recargar;
+- exportar el inventario y el historial a CSV, una función que pidió el propietario para tener la lista en Excel cada día.
+
+La regla de negocio se cumple: una salida mayor que las existencias se rechaza y no descuenta nada.
+
+Trabajé con Scrum adaptado a un integrante, con un backlog de 11 historias y 31 puntos. Al 20/11/2026 hay 16 puntos terminados con pruebas aprobadas. Los 15 restantes tienen sus pruebas aprobadas o parciales, pero falta cerrar su Definition of Done. Seis de las historias no estaban en el acta y se registraron como cambios CC-01 a CC-03.
+
+En calidad, el análisis estático pasó de 18 errores de HTML y 1 de JavaScript a 0, y ninguna función supera una complejidad ciclomática de 10. Once de los trece casos de prueba están aprobados; los otros dos esperan la prueba manual de la descarga del CSV.
+
+La encuesta de satisfacción se aplicó el 20/11/2026 a 4 empleados. El CSAT es de **67 %** (2 de 3 respuestas válidas). Quedaron dos brechas principales: una persona insatisfecha sin causa conocida, y el propietario, que todavía no ha respondido.
+
+[COMPLETAR al cierre del sprint 2: puntos terminados finales y medición de cierre de la calidad.]
 
 ## 3. Acta de constitución final y control de cambios
 
@@ -187,29 +201,44 @@ La pregunta 3 no tiene ninguna respuesta «La aceptó», así que la regla de ne
 
 ## 11. Lecciones aprendidas
 
-**Tres decisiones acertadas:** [COMPLETAR, cada una con su evidencia]
+> **[PROPUESTA]** redactada por el asistente a partir de las evidencias, a pedido del autor. Confírmela, corríjala y explíquela con sus palabras.
 
-**Tres errores, cada uno con su consecuencia:** [COMPLETAR. Para empezar, revise los hechos de la retrospectiva 1.]
+**Tres decisiones acertadas:**
+
+1. **Incorporar la exportación a CSV que pidió el propietario.** Es el único cambio que vino del cliente y responde a una necesidad concreta: tener la lista del inventario en Excel cada día. Evidencia: CC-03, HU-10 y HU-11.
+2. **Bloquear desde el código la salida mayor al stock.** Era el riesgo de impacto alto del acta. Lo confirman CP-04 y la encuesta: 3 de 3 personas vieron el rechazo y nadie respondió «La aceptó».
+3. **Corregir el instrumento de satisfacción antes de aplicarlo.** El borrador tenía preguntas dobles y escalas sin definir. La versión aplicada separa los temas e incluye «No lo probé», lo que permitió excluir del CSAT a quien no evaluó. Evidencia: `BORRADOR_INSTRUMENTO_SATISFACCION.md` frente a `INSTRUMENTO_SATISFACCION.md`.
+
+**Tres errores, cada uno con su consecuencia:**
+
+1. **Programar las funciones antes de tener el backlog.** Todo se hizo entre el 3 y el 8 de octubre, y el backlog es del 23. Consecuencia: el sprint 1 solo validó, y su velocidad de 5 puntos no mide la capacidad real.
+2. **No registrar los cambios cuando ocurrieron.** Seis historias fuera del acta quedaron sin registro durante seis semanas, aunque el acta decía que había que registrarlas. Consecuencia: el control de cambios se reconstruyó al final, sin el motivo de cada decisión anotado en su momento.
+3. **No aplicar la encuesta al interlocutor principal.** Las 4 respuestas son de empleados y el propietario no respondió. Consecuencia: el CSAT no refleja la opinión de quien decide sobre el sistema.
 
 ## 12. Declaración de uso de IA
 
-**Lo que hizo el asistente de IA (Claude Code) el 20/11/2026:** esto está registrado en los commits de la rama `claude/stoic-bohr-jfvq6z`.
+Usé un asistente de IA (Claude Code) el 20/11/2026. Todo lo que hizo está en los commits de la rama `claude/stoic-bohr-jfvq6z` (pull request #10).
 
-- Comparó el repositorio con el ejemplo de entrega final del curso y señaló lo que faltaba.
-- Ejecutó el análisis estático (ESLint y html-validate) y dejó la configuración en el repositorio.
-- Corrigió DEF-01, DEF-02 y DEF-03, que son cambios de atributos HTML y de un escape en una expresión regular. No cambió la lógica de la aplicación.
-- Redactó la propuesta de plan de calidad, la propuesta del sprint 2, las plantillas de retrospectiva y este borrador.
-- No escribió respuestas de la encuesta, actas de retrospectiva, horas, riesgos ni lecciones aprendidas.
+**Para qué lo usé:**
 
-**Lo que verifiqué manualmente:** [COMPLETAR]
+- Comparar el repositorio con el ejemplo de entrega final del curso y encontrar lo que faltaba.
+- Configurar y ejecutar el análisis estático (ESLint y html-validate) y generar el anexo B.
+- Corregir DEF-01, DEF-02 y DEF-03: atributos HTML y un escape en una expresión regular, sin cambiar la lógica del sistema.
+- Crear la página `encuesta.html` y el script de Google Apps Script que generó el formulario de Google Forms. Las preguntas son las de mi instrumento, sin cambios.
+- Redactar este documento, el plan de calidad, la propuesta del sprint 2 y las diapositivas, con los datos del repositorio, del acta y de la hoja de respuestas.
+- Redactar las partes marcadas **[PROPUESTA]**: lo que no funcionó en la retrospectiva 1, las acciones M1 y M2 y las lecciones aprendidas. [CONFIRMAR: «Las revisé y las acepto», o indicar qué cambié.]
 
-**Otros usos de IA durante el semestre:** [COMPLETAR]
+**Lo que no hizo el asistente:** no respondió la encuesta ni inventó cifras. Las respuestas vienen de la hoja de Google Forms. Las decisiones sobre los cambios, el modelo Scrum y el origen de cada función son mías.
+
+**Lo que verifiqué manualmente:** [COMPLETAR: por ejemplo, la descarga de los CSV, que la aplicación funcione después de las correcciones y la revisión de cada propuesta]
+
+**Otros usos de IA durante el semestre:** [COMPLETAR, o «ninguno»]
 
 ## 13. Anexos
 
-- **A.** Actas de retrospectiva: `RETROSPECTIVAS.md` [COMPLETAR]
-- **B.** Reportes del análisis estático: salida de `npm run analisis` en cada medición [COMPLETAR, con capturas]
-- **C.** Casos de prueba: `PRUEBAS.md`
-- **D.** Burndown e historial del tablero [COMPLETAR, con capturas]
-- **E.** Instrumento de satisfacción y respuestas: hoja «Respuestas: encuesta de satisfacción del inventario» (4 respuestas del 20/11/2026) [COMPLETAR: adjuntar el CSV y la captura]
-- **F.** Enlaces verificados en incógnito el [COMPLETAR: fecha]
+- **A.** Actas de retrospectiva: [`RETROSPECTIVAS.md`](./RETROSPECTIVAS.md). La retrospectiva 2 se llena al cerrar el sprint 2.
+- **B.** Reporte del análisis estático, antes y después de las correcciones: [`anexos/B_analisis_estatico.txt`](./anexos/B_analisis_estatico.txt).
+- **C.** Casos de prueba: [`PRUEBAS.md`](../../PRUEBAS.md).
+- **D.** Burndown e historial del tablero: [COMPLETAR con capturas del tablero de GitHub].
+- **E.** Instrumento y respuestas: [`INSTRUMENTO_SATISFACCION.md`](../../INSTRUMENTO_SATISFACCION.md) y [`anexos/E_respuestas_encuesta.csv`](./anexos/E_respuestas_encuesta.csv), transcritas de la hoja «Respuestas: encuesta de satisfacción del inventario» de Google Forms. [COMPLETAR: captura del resumen de Google Forms]
+- **F.** Acta de constitución: `ActaDeConstitucion_SamuellBaez.pdf`. Enlaces verificados en incógnito el [COMPLETAR: fecha].

@@ -6,7 +6,7 @@
 
 ## Retrospectiva 1 · Sprint 1 (HU-02 y HU-05)
 
-**Fecha:** [COMPLETAR] · **Participante:** Samuell Steveen Baez Diaz
+**Fecha:** 20/11/2026 · **Participante:** Samuell Steveen Baez Diaz
 
 ### Hechos del sprint, tomados del repositorio
 
@@ -22,7 +22,7 @@
 
 En palabras del autor: en el sprint 1 se trabajó en esas historias para avanzar en el proyecto y mejorarlo. Las dos historias comprometidas (HU-02 y HU-05) se cerraron con sus criterios de aceptación verificados.
 
-[COMPLETAR: un hecho concreto que muestre qué funcionó, por ejemplo qué práctica ayudó a cerrar las dos historias]
+**[PROPUESTA]** Verificar cada criterio de aceptación con datos concretos (PEND01, TST001) y dejar el resultado en el issue ayudó a cerrar las dos historias con evidencia comprobable (issues #8 y #9, `PRUEBAS.md`).
 
 ### Qué no funcionó
 
