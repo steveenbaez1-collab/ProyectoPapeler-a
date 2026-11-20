@@ -23,15 +23,15 @@
     <!-- MENÚ PRINCIPAL -->
     <section class="menu">
 
-        <button class="boton-menu activo" onclick="mostrarSeccion('productos', this)">
+        <button type="button" class="boton-menu activo" onclick="mostrarSeccion('productos', this)">
             Gestión de productos
         </button>
 
-        <button class="boton-menu" onclick="mostrarSeccion('inventario', this)">
+        <button type="button" class="boton-menu" onclick="mostrarSeccion('inventario', this)">
             Consulta de inventario
         </button>
 
-        <button class="boton-menu" onclick="mostrarSeccion('movimientos', this)">
+        <button type="button" class="boton-menu" onclick="mostrarSeccion('movimientos', this)">
             Gestión de movimientos
         </button>
 
@@ -124,11 +124,11 @@
 
                     <thead>
                         <tr>
-                            <th>Código</th>
-                            <th>Producto</th>
-                            <th>Cantidad disponible</th>
-                            <th>Stock mínimo</th>
-                            <th>Estado</th>
+                            <th scope="col">Código</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Cantidad disponible</th>
+                            <th scope="col">Stock mínimo</th>
+                            <th scope="col">Estado</th>
                         </tr>
                     </thead>
 
@@ -202,11 +202,11 @@
 
                     <thead>
                         <tr>
-                            <th>Código</th>
-                            <th>Producto</th>
-                            <th>Stock disponible</th>
-                            <th>Stock mínimo</th>
-                            <th>Estado</th>
+                            <th scope="col">Código</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Stock disponible</th>
+                            <th scope="col">Stock mínimo</th>
+                            <th scope="col">Estado</th>
                         </tr>
                     </thead>
 
@@ -334,11 +334,11 @@
                     <thead>
 
                         <tr>
-                            <th>Código</th>
-                            <th>Tipo</th>
-                            <th>Cantidad</th>
-                            <th>Resultado</th>
-                            <th>Fecha y hora</th>
+                            <th scope="col">Código</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Resultado</th>
+                            <th scope="col">Fecha y hora</th>
                         </tr>
 
                     </thead>

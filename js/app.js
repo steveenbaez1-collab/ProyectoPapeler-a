@@ -774,7 +774,7 @@ function escaparValorCSV(valor) {
         texto = "'" + texto;
     }
 
-    return "\"" + texto.replace(/\"/g, "\"\"") + "\"";
+    return "\"" + texto.replace(/"/g, "\"\"") + "\"";
 }
 
 
