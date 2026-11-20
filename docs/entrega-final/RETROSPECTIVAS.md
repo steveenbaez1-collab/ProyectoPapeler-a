@@ -20,7 +20,9 @@
 
 ### Qué funcionó
 
-[COMPLETAR, con hechos concretos]
+En palabras del autor: en el sprint 1 se trabajó en esas historias para avanzar en el proyecto y mejorarlo. Las dos historias comprometidas (HU-02 y HU-05) se cerraron con sus criterios de aceptación verificados.
+
+[COMPLETAR: un hecho concreto que muestre qué funcionó, por ejemplo qué práctica ayudó a cerrar las dos historias]
 
 ### Qué no funcionó
 

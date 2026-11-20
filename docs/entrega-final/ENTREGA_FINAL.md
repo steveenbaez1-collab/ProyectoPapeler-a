@@ -22,6 +22,7 @@
 [COMPLETAR. Una página como máximo. Puede partir de estos hechos:]
 
 - **Qué se construyó:** un sistema web en HTML, CSS y JavaScript para registrar productos, entradas y salidas, consultar existencias, buscar y filtrar, conservar los datos en el navegador y exportar a CSV. Regla principal: no se acepta una salida mayor que el stock.
+- **Propósito:** ayudar a papelerías pequeñas con su inventario, para que ahorren tiempo en la organización (palabras del autor).
 - **Para quién:** el propietario de la papelería, que es el interlocutor principal, y los empleados encargados del inventario (acta, sección 6).
 - **Cómo:** [COMPLETAR: el modelo de la sección 4], con un backlog de 11 historias y 31 puntos.
 - **Resultado:** [COMPLETAR al cierre: puntos terminados de 31 y estado de los ACQ]. Encuesta del 20/11/2026: 4 respuestas, todas de empleados; CSAT de 67 % (2 de 3 respuestas válidas).
@@ -48,12 +49,12 @@ El acta radicada es `ActaDeConstitucion_SamuellBaez.pdf` (actividad del 14 al 21
 
 | N.º | Qué cambió | Fecha | Por qué | Quién lo decidió |
 | --- | --- | --- | --- | --- |
-| CC-01 | Se agregaron la búsqueda de productos (HU-06) y los filtros por estado de stock (HU-07) y por tipo de movimiento (HU-08), que no estaban en los cuatro bloques del acta | 08/10/2026 (commits `cbcee4b`, `77362ee`, `dc2627d`) | [COMPLETAR] | [COMPLETAR] |
-| CC-02 | Se agregó la conservación de datos al recargar (HU-09) | 08/10/2026 (commit `f0be885`) | [COMPLETAR] | [COMPLETAR] |
-| CC-03 | Se agregó la exportación a CSV del inventario y del historial (HU-10 y HU-11) | 08/10/2026 (commits `70dbb6b`, `41bface`) | [COMPLETAR] | [COMPLETAR] |
-| CC-04 | Se agregó la exclusión «sincronización entre dispositivos», consecuencia de guardar los datos en el navegador | 23/10/2026 (`HISTORIAS_USUARIO.md`) | Los datos quedan solo en el navegador donde se registran | [COMPLETAR] |
-| CC-05 | El acta proponía terminar el 6 a 9 de octubre; el proyecto siguió con backlog, sprints y entrega final | 23/10/2026 | [COMPLETAR] | [COMPLETAR] |
-| CC-06 | Se adoptó el plan de calidad con cinco atributos (ACQ-01 a ACQ-05) | 20/11/2026 | Medir la calidad con umbrales verificables | [COMPLETAR] |
+| CC-01 | Se agregaron la búsqueda de productos (HU-06) y los filtros por estado de stock (HU-07) y por tipo de movimiento (HU-08), que no estaban en los cuatro bloques del acta | 08/10/2026 (commits `cbcee4b`, `77362ee`, `dc2627d`) | Avanzar en el proyecto y mejorar el sistema (palabras del autor) | Samuell Steveen Baez Diaz |
+| CC-02 | Se agregó la conservación de datos al recargar (HU-09) | 08/10/2026 (commit `f0be885`) | Avanzar en el proyecto y mejorar el sistema (palabras del autor) | Samuell Steveen Baez Diaz |
+| CC-03 | Se agregó la exportación a CSV del inventario y del historial (HU-10 y HU-11) | 08/10/2026 (commits `70dbb6b`, `41bface`) | Avanzar en el proyecto y mejorar el sistema (palabras del autor) | Samuell Steveen Baez Diaz |
+| CC-04 | Se agregó la exclusión «sincronización entre dispositivos», consecuencia de guardar los datos en el navegador | 23/10/2026 (`HISTORIAS_USUARIO.md`) | Los datos quedan solo en el navegador donde se registran | Samuell Steveen Baez Diaz |
+| CC-05 | El acta proponía terminar el 6 a 9 de octubre; el proyecto siguió con backlog, sprints y entrega final | 23/10/2026 | Avanzar en el proyecto y mejorar el sistema (palabras del autor) | Samuell Steveen Baez Diaz |
+| CC-06 | Se adoptó el plan de calidad con cinco atributos (ACQ-01 a ACQ-05) | 20/11/2026 | Medir la calidad con umbrales verificables | Samuell Steveen Baez Diaz |
 
 El acta indica en su matriz de riesgos «Registrar cambios y revisar su impacto antes de incorporarlos», pero CC-01 a CC-05 no se registraron cuando ocurrieron. Ver la sección 7.
 
