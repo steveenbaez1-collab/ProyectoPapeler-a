@@ -1,0 +1,64 @@
+ANEXO B · Reporte del análisis estático
+Proyecto: Sistema de Control de Inventario para Papelería
+Herramientas: html-validate 8.29.0 (configuración recommended) y ESLint 9.17.0 (js recommended + complexity ≤ 10)
+Generado: 20/11/2026, con la configuración de package.json, eslint.config.mjs y .htmlvalidate.json del repositorio
+
+================================================================
+MEDICIÓN 1 · Antes de las correcciones (rama main, commit 024bd91)
+================================================================
+
+$ html-validate index.html
+
+/home/user/ProyectoPapeler-a/index.html
+   26:10  error  <button> is missing recommended "type" attribute                                no-implicit-button-type
+   30:10  error  <button> is missing recommended "type" attribute                                no-implicit-button-type
+   34:10  error  <button> is missing recommended "type" attribute                                no-implicit-button-type
+  127:30  error  <th> element must have a valid scope attribute: row, col, rowgroup or colgroup  wcag/h63
+  128:30  error  <th> element must have a valid scope attribute: row, col, rowgroup or colgroup  wcag/h63
+  129:30  error  <th> element must have a valid scope attribute: row, col, rowgroup or colgroup  wcag/h63
+  130:30  error  <th> element must have a valid scope attribute: row, col, rowgroup or colgroup  wcag/h63
+  131:30  error  <th> element must have a valid scope attribute: row, col, rowgroup or colgroup  wcag/h63
+  205:30  error  <th> element must have a valid scope attribute: row, col, rowgroup or colgroup  wcag/h63
+  206:30  error  <th> element must have a valid scope attribute: row, col, rowgroup or colgroup  wcag/h63
+  207:30  error  <th> element must have a valid scope attribute: row, col, rowgroup or colgroup  wcag/h63
+  208:30  error  <th> element must have a valid scope attribute: row, col, rowgroup or colgroup  wcag/h63
+  209:30  error  <th> element must have a valid scope attribute: row, col, rowgroup or colgroup  wcag/h63
+  337:30  error  <th> element must have a valid scope attribute: row, col, rowgroup or colgroup  wcag/h63
+  338:30  error  <th> element must have a valid scope attribute: row, col, rowgroup or colgroup  wcag/h63
+  339:30  error  <th> element must have a valid scope attribute: row, col, rowgroup or colgroup  wcag/h63
+  340:30  error  <th> element must have a valid scope attribute: row, col, rowgroup or colgroup  wcag/h63
+  341:30  error  <th> element must have a valid scope attribute: row, col, rowgroup or colgroup  wcag/h63
+
+✖ 18 problems (18 errors, 0 warnings)
+
+More information:
+  https://html-validate.org/rules/no-implicit-button-type.html
+  https://html-validate.org/rules/wcag/h63.html
+
+
+$ eslint js/app.js
+
+js/app.js
+  777:34  error  Unnecessary escape character: \"  no-useless-escape
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+================================================================
+MEDICIÓN 2 · Después de DEF-01, DEF-02 y DEF-03 (rama claude/stoic-bohr-jfvq6z)
+================================================================
+
+$ npm run analisis
+
+> analisis
+> npm run analisis:js && npm run analisis:html
+
+
+> analisis:js
+> eslint js/app.js js/encuesta.js
+
+
+> analisis:html
+> html-validate index.html encuesta.html
+
+Resultado: sin errores (código de salida 0).

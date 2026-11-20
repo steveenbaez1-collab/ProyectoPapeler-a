@@ -1,0 +1,72 @@
+/* =========================
+   ENCUESTA DE SATISFACCIÓN
+   ========================= */
+
+.encuesta {
+    max-width: 760px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.encuesta .tarjeta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 22px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+}
+
+.encuesta .tarjeta p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.encuesta .tarjeta a {
+    color: #1f4e79;
+    font-weight: bold;
+}
+
+.pregunta {
+    border: none;
+    margin-bottom: 24px;
+}
+
+.pregunta legend,
+.titulo-pregunta {
+    display: block;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.pregunta label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 4px;
+    cursor: pointer;
+}
+
+.pregunta input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.campo-otro,
+.pregunta textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c9d2db;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.campo-otro {
+    margin: 2px 0 6px 32px;
+    width: calc(100% - 32px);
+}
+
+.pregunta-incompleta legend {
+    color: #b42318;
+}

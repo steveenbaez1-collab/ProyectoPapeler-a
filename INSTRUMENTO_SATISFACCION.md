@@ -2,7 +2,7 @@
 
 **Proyecto:** Sistema de Control de Inventario para Papelería  
 **Responsable:** Samuell Steveen Baez Diaz  
-**Estado:** Listo para revisión y aplicación; aún no aplicado  
+**Estado:** Aplicado el 20/11/2026 con Google Forms; 4 respuestas  
 **Dirigido a:** propietario o empleado que haya probado el sistema
 
 ## Propósito
@@ -11,7 +11,7 @@ Conocer cómo fue usar las funciones de consulta del inventario y registro de mo
 
 ## Instrucciones para quien responde
 
-Marque una opción por pregunta. Si no alcanzó a probar una función, seleccione «No la probé». No hay respuestas correctas o incorrectas.
+Marque una opción por pregunta. Si no alcanzó a probar una función, seleccione «No lo probé». No hay respuestas correctas o incorrectas.
 
 ## Preguntas
 
@@ -71,4 +71,4 @@ ____________________________________________________________________
 
 | Fecha | Perfil | Respuestas válidas | Observaciones |
 | --- | --- | ---: | --- |
-| Pendiente de aplicación | — | — | No se han recibido respuestas; no hay resultado de satisfacción todavía. |
+| 20/11/2026, 11:37 a 11:42 | 4 × Empleado(a) que registra o consulta inventario | P4: 3 de 4 (una «No lo probé») | CSAT = 2 ÷ 3 = 67 %. P3: 3 vieron el rechazo, 1 no lo probó, 0 «La aceptó». Un comentario. Respuestas completas en la hoja «Respuestas: encuesta de satisfacción del inventario» de Google Drive. |
