@@ -24,7 +24,7 @@
 - **Qué se construyó:** un sistema web en HTML, CSS y JavaScript para registrar productos, entradas y salidas, consultar existencias, buscar y filtrar, conservar los datos en el navegador y exportar a CSV. Regla principal: no se acepta una salida mayor que el stock.
 - **Propósito:** ayudar a papelerías pequeñas con su inventario, para que ahorren tiempo en la organización (palabras del autor).
 - **Para quién:** el propietario de la papelería, que es el interlocutor principal, y los empleados encargados del inventario (acta, sección 6).
-- **Cómo:** [COMPLETAR: el modelo de la sección 4], con un backlog de 11 historias y 31 puntos.
+- **Cómo:** Scrum adaptado a un integrante, con un backlog de 11 historias y 31 puntos.
 - **Resultado:** [COMPLETAR al cierre: puntos terminados de 31 y estado de los ACQ]. Encuesta del 20/11/2026: 4 respuestas, todas de empleados; CSAT de 67 % (2 de 3 respuestas válidas).
 
 ## 3. Acta de constitución final y control de cambios
@@ -49,18 +49,30 @@ El acta radicada es `ActaDeConstitucion_SamuellBaez.pdf` (actividad del 14 al 21
 
 | N.º | Qué cambió | Fecha | Por qué | Quién lo decidió |
 | --- | --- | --- | --- | --- |
-| CC-01 | Se agregaron la búsqueda de productos (HU-06) y los filtros por estado de stock (HU-07) y por tipo de movimiento (HU-08), que no estaban en los cuatro bloques del acta | 08/10/2026 (commits `cbcee4b`, `77362ee`, `dc2627d`) | Avanzar en el proyecto y mejorar el sistema (palabras del autor) | Samuell Steveen Baez Diaz |
-| CC-02 | Se agregó la conservación de datos al recargar (HU-09) | 08/10/2026 (commit `f0be885`) | Avanzar en el proyecto y mejorar el sistema (palabras del autor) | Samuell Steveen Baez Diaz |
-| CC-03 | Se agregó la exportación a CSV del inventario y del historial (HU-10 y HU-11) | 08/10/2026 (commits `70dbb6b`, `41bface`) | Avanzar en el proyecto y mejorar el sistema (palabras del autor) | Samuell Steveen Baez Diaz |
+| CC-01 | Se agregaron la búsqueda de productos (HU-06) y los filtros por estado de stock (HU-07) y por tipo de movimiento (HU-08), que no estaban en los cuatro bloques del acta | 08/10/2026 (commits `cbcee4b`, `77362ee`, `dc2627d`) | Idea propia del autor, para avanzar en el proyecto y mejorar el sistema | Samuell Steveen Baez Diaz |
+| CC-02 | Se agregó la conservación de datos al recargar (HU-09) | 08/10/2026 (commit `f0be885`) | Idea propia del autor, para avanzar en el proyecto y mejorar el sistema | Samuell Steveen Baez Diaz |
+| CC-03 | Se agregó la exportación a CSV del inventario y del historial (HU-10 y HU-11) | 08/10/2026 (commits `70dbb6b`, `41bface`) | Lo pidió el propietario de la papelería: quería tener cada día en Excel la lista del inventario | Propietario (solicitud); Samuell Steveen Baez Diaz (lo incorporó) |
 | CC-04 | Se agregó la exclusión «sincronización entre dispositivos», consecuencia de guardar los datos en el navegador | 23/10/2026 (`HISTORIAS_USUARIO.md`) | Los datos quedan solo en el navegador donde se registran | Samuell Steveen Baez Diaz |
-| CC-05 | El acta proponía terminar el 6 a 9 de octubre; el proyecto siguió con backlog, sprints y entrega final | 23/10/2026 | Avanzar en el proyecto y mejorar el sistema (palabras del autor) | Samuell Steveen Baez Diaz |
+| CC-05 | El acta proponía terminar el 6 a 9 de octubre; el proyecto siguió con backlog, sprints y entrega final | 23/10/2026 | Idea propia del autor, para avanzar en el proyecto y mejorar el sistema | Samuell Steveen Baez Diaz |
 | CC-06 | Se adoptó el plan de calidad con cinco atributos (ACQ-01 a ACQ-05) | 20/11/2026 | Medir la calidad con umbrales verificables | Samuell Steveen Baez Diaz |
 
 El acta indica en su matriz de riesgos «Registrar cambios y revisar su impacto antes de incorporarlos», pero CC-01 a CC-05 no se registraron cuando ocurrieron. Ver la sección 7.
 
 ## 4. Modelo de proceso adoptado
 
-[COMPLETAR: qué modelo eligió, con qué criterios de este proyecto (trabajo individual, disponibilidad del cliente, incertidumbre de los requisitos), qué descartó y por qué, y si cambió algo durante el semestre.]
+**Modelo:** Scrum, adaptado a un equipo de una persona con autorización de la docente. El autor tiene los roles de Product Owner, Scrum Master y desarrollo.
+
+**Cómo se aplicó, según las evidencias:**
+
+- **Product backlog:** 11 historias de usuario estimadas en 31 story points (`HISTORIAS_USUARIO.md`, 23/10/2026).
+- **Sprints con objetivo:** el sprint 1 comprometió HU-02 y HU-05 (5 puntos) y cerró el 30/10/2026.
+- **Definition of Ready y Definition of Done:** `ESTANDARES.md`, secciones 4 y 5.
+- **Tablero:** tarjetas por historia en GitHub (issues #8 y #9).
+- **Retrospectivas:** `RETROSPECTIVAS.md`.
+
+**Por qué Scrum y no otro modelo:** [COMPLETAR: por qué lo eligió frente a cascada u otro modelo. Un hecho que lo apoya: entre el acta y el backlog se agregaron 6 historias que no estaban previstas (CC-01 a CC-03). Con cascada, los requisitos habrían quedado congelados en el acta.]
+
+**Cambios al modelo durante el semestre:** el acta (septiembre) planeaba el trabajo por entregables con fecha, hasta el 9 de octubre. Desde el 23 de octubre el trabajo se organizó con backlog y sprints (CC-05).
 
 ## 5. Gestión del alcance
 
@@ -166,10 +178,10 @@ La pregunta 3 no tiene ninguna respuesta «La aceptó», así que la regla de ne
 
 | Brecha | Qué muestra la encuesta | Qué se hizo |
 | --- | --- | --- |
-| 1 | Una persona quedó insatisfecha, no dejó comentario y no probó la salida mayor al stock. No se sabe la causa | [COMPLETAR: por ejemplo, preguntarle qué le faltó y registrar la respuesta] |
-| 2 | El propietario, interlocutor principal según el acta, no respondió. Las 4 respuestas son de empleados | [COMPLETAR: aplicarla al propietario o explicar por qué no fue posible] |
-| 3 | Un comentario pide «agregar nuevas funciones a la medida que lleguen más productos». Es una petición abierta, sin una función concreta | [COMPLETAR: por ejemplo, registrarla como historia candidata para una segunda versión, sin comprometerla, con el cambio CC correspondiente] |
-| 4 | Dos de las cuatro personas marcaron «No lo probé» en alguna pregunta: la invitación no garantizó que probaran todos los flujos | [COMPLETAR: por ejemplo, incluir los pasos de prueba en el formulario] |
+| 1 | Una persona quedó insatisfecha, no dejó comentario y no probó la salida mayor al stock. No se sabe la causa | Propuesta: preguntarle directamente qué le faltó al sistema y anotar la respuesta. La encuesta es anónima, así que la pregunta se hace a los cuatro empleados. [COMPLETAR con lo que respondan] |
+| 2 | El propietario, interlocutor principal según el acta, no respondió. Las 4 respuestas son de empleados | Aplicar la encuesta al propietario, que puede responder el mismo formulario. Pendiente: [COMPLETAR con la fecha y su respuesta] |
+| 3 | Un comentario pide «agregar nuevas funciones a la medida que lleguen más productos». Es una petición abierta, sin una función concreta | Propuesta: registrarla como historia candidata para una segunda versión, sin comprometerla, porque no nombra una función concreta. [CONFIRMAR] |
+| 4 | Dos de las cuatro personas marcaron «No lo probé» en alguna pregunta: la invitación no garantizó que probaran todos los flujos | Propuesta: en la siguiente aplicación (al propietario), incluir en el mensaje los pasos de prueba: registrar un producto, una entrada, una salida y una salida mayor al stock. [CONFIRMAR] |
 
 **Evidencia:** exporte la hoja de respuestas a CSV y guarde una captura del resumen de Google Forms para el anexo E.
 

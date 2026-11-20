@@ -26,14 +26,20 @@ En palabras del autor: en el sprint 1 se trabajó en esas historias para avanzar
 
 ### Qué no funcionó
 
-[COMPLETAR, con hechos concretos]
+> **Propuesta del asistente a partir de las evidencias del repositorio. El autor la pidió y la debe confirmar o corregir antes de entregar.**
+
+1. **Los cambios no se registraron cuando ocurrieron.** La búsqueda, los filtros, los datos guardados y la exportación a CSV (6 historias, 16 puntos) se agregaron el 8/10/2026 y no estaban en el acta. Su registro (CC-01 a CC-03) se reconstruyó el 20/11/2026, seis semanas después.
+2. **Las evidencias de una misma prueba no coincidían.** CP-10 y CP-11 quedaron en «Aprobado» en los issues #6 y #7 y en «Parcial» en `PRUEBAS.md`, porque se actualizó un lugar y no el otro.
+3. **El sprint no construyó, solo validó.** Las funciones de HU-02 y HU-05 ya estaban programadas desde octubre, así que los 5 puntos del sprint 1 midieron validación y documentación. La velocidad no refleja la capacidad real de desarrollo.
 
 ### Acciones de mejora para el sprint 2
 
 | ID | Acción | Responsable | Cómo se comprobará en el sprint 2 |
 | --- | --- | --- | --- |
-| M1 | [COMPLETAR] | Samuell | [COMPLETAR: qué dato del tablero o del repositorio lo probará] |
-| M2 | [COMPLETAR] | Samuell | [COMPLETAR] |
+| M1 | Registrar cada cambio de alcance (CC-xx) en `ENTREGA_FINAL.md` el mismo día en que se decide, con fecha, motivo y quién lo pidió | Samuell | Cada CC nuevo tiene un commit del mismo día de la decisión |
+| M2 | Al cerrar una prueba, actualizar en el mismo commit `PRUEBAS.md` y el issue correspondiente | Samuell | En el sprint 2, ningún caso con estado distinto entre `PRUEBAS.md` y su issue (empezando por CP-10 y CP-11) |
+
+M1 y M2 también son propuestas del asistente basadas en los problemas 1 y 2. [CONFIRMAR]
 
 ---
 
