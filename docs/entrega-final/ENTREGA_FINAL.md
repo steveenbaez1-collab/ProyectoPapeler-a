@@ -116,7 +116,7 @@ Atributos, umbrales, mediciones y defectos en [`PLAN_CALIDAD.md`](./PLAN_CALIDAD
 
 ## 10. Satisfacción del cliente
 
-**Instrumento:** `INSTRUMENTO_SATISFACCION.md` (4 preguntas y perfil de uso). La versión con sesgos que se corrigió está en `BORRADOR_INSTRUMENTO_SATISFACCION.md`.
+**Instrumento:** `INSTRUMENTO_SATISFACCION.md` (4 preguntas y perfil de uso). Pasos para aplicarlo en [`APLICAR_ENCUESTA.md`](./APLICAR_ENCUESTA.md). La versión con sesgos que se corrigió está en `BORRADOR_INSTRUMENTO_SATISFACCION.md`.
 
 - **Aplicado el:** [COMPLETAR] · **Respondieron:** [COMPLETAR: número y perfil, sin nombres]
 - **CSAT** = respuestas de 4 o 5 en la pregunta 4 ÷ respuestas válidas = [COMPLETAR]

@@ -1,0 +1,56 @@
+# Cómo aplicar la encuesta de satisfacción
+
+Son tres pasos y toman unos 15 minutos. Las preguntas son las mismas de `INSTRUMENTO_SATISFACCION.md`, sin cambios.
+
+## Paso 1. Publicar el sistema (2 minutos)
+
+1. En GitHub, abra el repositorio y entre a **Settings → Pages**.
+2. En **Build and deployment**, elija **Source: Deploy from a branch**, la rama **main** y la carpeta **/ (root)**. Pulse **Save**.
+3. Espere uno o dos minutos. El sistema queda en:
+   **https://steveenbaez1-collab.github.io/ProyectoPapeler-a/**
+4. Ábralo en una ventana de incógnito y en el celular para comprobar que carga.
+
+Los datos que registre cada persona se guardan solo en su propio navegador. Nadie ve los datos de otro ni los suyos.
+
+## Paso 2. Crear el formulario en Google Forms (10 minutos)
+
+Entre a forms.google.com, cree un formulario en blanco y copie esto tal cual.
+
+**Título:** Encuesta de satisfacción: Sistema de Control de Inventario para Papelería
+
+**Descripción:**
+> Esta encuesta busca conocer cómo fue usar el sistema de inventario e identificar qué conviene mejorar. Respóndala después de probar la consulta del inventario y el registro de entradas y salidas. Participar es voluntario y no se pide nombre ni información personal. Marque una opción por pregunta. Si no alcanzó a probar una función, elija «No la probé». No hay respuestas correctas o incorrectas.
+
+En **Configuración → Respuestas**, deje **desactivado** «Recopilar direcciones de correo electrónico».
+
+| N.º | Pregunta (marque **Obligatoria**) | Tipo | Opciones, en este orden |
+| --- | --- | --- | --- |
+| 0 | Perfil de uso | Opción múltiple | Propietario(a) · Empleado(a) que registra o consulta inventario · Otro usuario autorizado (active la opción «Otro») |
+| 1 | ¿Qué tan fácil fue encontrar la cantidad disponible de un producto? | Opción múltiple | Muy difícil · Difícil · Ni fácil ni difícil · Fácil · Muy fácil · No lo probé |
+| 2 | ¿Qué tan claro fue el resultado después de registrar una entrada de producto? | Opción múltiple | Nada claro · Poco claro · Medianamente claro · Claro · Muy claro · No lo probé |
+| 3 | Al intentar registrar una salida mayor que las existencias, ¿qué ocurrió? | Opción múltiple | El sistema la rechazó y mostró un mensaje · La aceptó · No lo probé · Otro (active la opción «Otro» para «Ocurrió algo distinto») |
+| 4 | En general, ¿qué tan satisfecho(a) quedó con el sistema para llevar el control básico del inventario? | Opción múltiple | Muy insatisfecho(a) · Insatisfecho(a) · Ni satisfecho(a) ni insatisfecho(a) · Satisfecho(a) · Muy satisfecho(a) · No lo probé |
+| 5 | ¿Qué cambio concreto le ayudaría más al usar el sistema? | Párrafo, **no** obligatoria | — |
+
+Pulse **Enviar → enlace (icono de cadena) → Acortar URL** y copie el enlace.
+
+## Paso 3. Enviar el mensaje
+
+Envíelo por WhatsApp al dueño y a los empleados de la papelería:
+
+> Hola, estoy terminando el sistema de inventario para la papelería como proyecto de la universidad. ¿Me ayudas probándolo unos 10 minutos y respondiendo 5 preguntas cortas?
+>
+> 1. Abre el sistema: https://steveenbaez1-collab.github.io/ProyectoPapeler-a/
+> 2. Registra un producto, haz una entrada y una salida, y prueba a sacar más unidades de las que hay.
+> 3. Responde aquí, es anónimo: [ENLACE DEL FORMULARIO]
+>
+> ¡Muchas gracias!
+
+## Paso 4. Guardar las respuestas como evidencia
+
+1. En Google Forms, en la pestaña **Respuestas**, descargue la hoja de cálculo (icono de Sheets → Descargar → CSV) y tome una captura del resumen. Ese es el anexo E.
+2. Llene la tabla «Registro de aplicación» de `INSTRUMENTO_SATISFACCION.md` con la fecha real, los perfiles y el número de respuestas válidas.
+3. **CSAT** = respuestas «Satisfecho(a)» o «Muy satisfecho(a)» en la pregunta 4 ÷ respuestas válidas a la pregunta 4 (sin contar «No lo probé») × 100.
+4. Si alguien responde «La aceptó» en la pregunta 3, repita CP-04 y corrija el sistema antes de dar la regla por buena.
+
+Cuando tenga las respuestas, compártalas con el asistente para llenar la sección 10 de `ENTREGA_FINAL.md`: el CSAT con el cálculo a la vista, las brechas y la decisión tomada con cada una.
