@@ -24,7 +24,16 @@ El repositorio trae `encuesta.html`, con las mismas preguntas del instrumento. C
 
 Si deja el número vacío, la encuesta avisa que todavía no está configurada y no envía nada.
 
-### Opción B: Google Forms (10 minutos)
+### Opción B: Google Forms creado con un script (3 minutos)
+
+`crear_formulario_google.gs` arma el formulario completo en su cuenta de Google, junto con una hoja de cálculo para las respuestas.
+
+1. Entre a https://script.google.com y pulse **Nuevo proyecto**.
+2. Borre lo que trae, pegue todo el contenido de `crear_formulario_google.gs` y guarde.
+3. Elija la función `crearFormulario` y pulse **Ejecutar**. Autorice el acceso. Como el script es suyo, Google muestra un aviso: **Configuración avanzada → Ir a … (no seguro) → Permitir**.
+4. En **Registro de ejecución** aparecen tres enlaces: el corto para compartir, el de edición y el de la hoja de respuestas.
+
+### Opción C: Google Forms a mano (10 minutos)
 
 Entre a forms.google.com, cree un formulario en blanco y copie esto tal cual.
 
